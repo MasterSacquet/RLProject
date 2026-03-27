@@ -13,7 +13,7 @@ import os
 
 
 # ================ CONFIG ================
-MODEL_NAME = "best_model"
+MODEL_NAME = "dqn_highway"
 SAVE_PATH = "checkpoints_sb3"
 NUM_TEST_EPISODES = 10
 RENDER = True  # Afficher la visualisation

@@ -5,18 +5,19 @@ Script d'entraînement pour Stable-Baselines3 DQN
 """
 
 import os
+import json
+import time  # ⬆️ Ajouté pour mesurer le temps d'entraînement
 import numpy as np
 from highway_env_wrapper import HighwayV0Env
 from stable_baselines3 import DQN
 from stable_baselines3.common.callbacks import BaseCallback, EvalCallback
-import json
 
 
 # ================ CONFIG ================
-TOTAL_TIMESTEPS = 20_000  # Entraînement rapide (équivalent ~100 épisodes)
+TOTAL_TIMESTEPS = 10_000  # Entraînement court
 MODEL_NAME = "dqn_highway"
 SAVE_PATH = "checkpoints_sb3"
-SAVE_INTERVAL = 20_000
+SAVE_INTERVAL = 10_000  # Sauvegarde à la fin
 
 os.makedirs(SAVE_PATH, exist_ok=True)
 
@@ -69,23 +70,27 @@ print("🤖 Création du modèle DQN Stable-Baselines3...")
 model = DQN(
     "MlpPolicy",
     env,
-    learning_rate=1e-4,  # Taux d'apprentissage stable
-    buffer_size=50_000,  # Réduit pour accélération (20k timesteps)
-    batch_size=32,  # Taille standard
-    exploration_fraction=0.1,  # 2k timesteps d'exploration décroissante
+    learning_rate=0.001,  # Augmenté pour apprendre vite sur peu de steps
+    buffer_size=10_000,  # Réduit pour 10k timesteps
+    batch_size=32,  # Réduit pour court entraînement
+    exploration_fraction=0.2,  # 2000 steps d'exploration (20% de 10k)
     exploration_initial_eps=1.0,  # Début aléatoire complet
     exploration_final_eps=0.05,  # 5% d'exploration à la fin
-    gamma=0.99,  # Discount factor long-terme
-    target_update_interval=2_000,  # Update réseau cible plus souvent (moins d'instabilité sur periodo court)
-    tau=0.001,  # Soft update factor
-    train_freq=8,  # Mise à jour tous les 8 steps (2x moins de mises à jour = 2x plus rapide)
-    gradient_steps=1,  # 1 seule étape de gradient (4x plus rapide)
-    max_grad_norm=10,  # Clipping de gradient
+    gamma=0.99,  # Discount factor standard
+    target_update_interval=1000,  # Réduit pour stabilité court terme
+    tau=0.001,  # Soft update factor standard
+    train_freq=2,  # Update très souvent pour apprendre plus
+    gradient_steps=2,  # Réduit pour vitesse
+    max_grad_norm=10,  # Clipping standard
+    learning_starts=1000,  # 1k steps = 10% de 10k timesteps
     verbose=1
 )
 
 # ================ ENTRAÎNEMENT ================
+# ================ ENTRAÎNEMENT ================
 print(f"\n📚 Entraînement sur {TOTAL_TIMESTEPS} timesteps...")
+print("⏱️ Configuration optimisée pour apprentissage rapide et stable...\n")
+
 metrics_callback = MetricsCallback(SAVE_PATH, SAVE_INTERVAL)
 
 # Callback d'évaluation périodique
@@ -94,17 +99,26 @@ eval_callback = EvalCallback(
     eval_env,
     best_model_save_path=SAVE_PATH,
     log_path=SAVE_PATH,
-    eval_freq=20_000,      # Évaluation une seule fois à la fin
-    n_eval_episodes=1,     # 1 seul épisode (plus rapide)
+    eval_freq=5000,        # Réduit pour au moins 2 évals
+    n_eval_episodes=2,     # Réduit pour vitesse
     deterministic=True,
     render=False
 )
 
+# Mesurer le temps d'entraînement
+start_time = time.time()
+
 model.learn(
     total_timesteps=TOTAL_TIMESTEPS,
-    callback=[metrics_callback, eval_callback],  # Utiliser les deux callbacks
-    progress_bar=True
+    callback=[metrics_callback, eval_callback],
+    progress_bar=True,
+    log_interval=50  # Afficher le log tous les 50 updates
 )
+
+elapsed_time = time.time() - start_time
+hours, remainder = divmod(elapsed_time, 3600)
+minutes, seconds = divmod(remainder, 60)
+print(f"\n✅ Entraînement complété en {int(hours)}h {int(minutes)}m {int(seconds)}s")
 
 # ================ SAUVEGARDE ================
 model_path = os.path.join(SAVE_PATH, MODEL_NAME)
