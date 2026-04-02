@@ -4,18 +4,21 @@ import argparse
 import json
 import os
 import random
+import sys
 from datetime import datetime
+from pathlib import Path
 
 import numpy as np
 import torch
-import sys
-from pathlib import Path
-
-root_dir = Path(__file__).resolve().parent.parent
-sys.path.append(str(root_dir))
-from highway_env_wrapper import HighwayV0Env
-from dqn_agent import DQNAgent
 from stable_baselines3 import DQN as DQN_SB3
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+SRC_DIR = ROOT_DIR / "src"
+if str(SRC_DIR) not in sys.path:
+    sys.path.append(str(SRC_DIR))
+
+from rlproject.highway_env_wrapper import HighwayV0Env
+from rlproject.dqn_agent import DQNAgent
 
 
 def set_global_seeds(seed):

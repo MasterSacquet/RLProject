@@ -5,16 +5,24 @@ Script de comparaison entre l'agent DQN personnalisé et Stable-Baselines3
 Évalue les deux sur 50 épisodes avec statistiques
 """
 
-import torch
-import numpy as np
-import os
 import json
+import os
+import sys
 from datetime import datetime
-import matplotlib.pyplot as plt
+from pathlib import Path
 
-from highway_env_wrapper import HighwayV0Env
-from dqn_agent import DQNAgent
+import matplotlib.pyplot as plt
+import numpy as np
+import torch
 from stable_baselines3 import DQN as DQN_SB3
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+SRC_DIR = ROOT_DIR / "src"
+if str(SRC_DIR) not in sys.path:
+    sys.path.append(str(SRC_DIR))
+
+from rlproject.highway_env_wrapper import HighwayV0Env
+from rlproject.dqn_agent import DQNAgent
 
 
 # ================ CONFIG ================

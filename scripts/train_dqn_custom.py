@@ -5,13 +5,22 @@ Script d'entraînement pour l'agent DQN personnalisé
 Avec sauvegarde des métriques
 """
 
-import torch
-import numpy as np
-import os
 import json
-from highway_env_wrapper import HighwayV0Env
-from dqn_agent import DQNAgent
-from replay_buffer import ReplayBuffer
+import os
+import sys
+from pathlib import Path
+
+import numpy as np
+import torch
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+SRC_DIR = ROOT_DIR / "src"
+if str(SRC_DIR) not in sys.path:
+    sys.path.append(str(SRC_DIR))
+
+from rlproject.highway_env_wrapper import HighwayV0Env
+from rlproject.dqn_agent import DQNAgent
+from rlproject.replay_buffer import ReplayBuffer
 
 
 # ================ CONFIG ================

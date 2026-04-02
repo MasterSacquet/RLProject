@@ -2,7 +2,7 @@
 
 import gymnasium as gym
 import highway_env  # obligatoire pour register l'env
-from shared_core_config import SHARED_CORE_CONFIG
+from .shared_core_config import SHARED_CORE_CONFIG
 
 
 class HighwayV0Env:

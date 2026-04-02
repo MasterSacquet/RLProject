@@ -5,11 +5,20 @@ Script de test pour modèle entraîné avec Stable-Baselines3
 Permet de charger un modèle pré-entraîné et de l'évaluer
 """
 
+import os
+import sys
+from pathlib import Path
+
 import numpy as np
-from highway_env_wrapper import HighwayV0Env
 from stable_baselines3 import DQN
 from stable_baselines3.common.evaluation import evaluate_policy
-import os
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+SRC_DIR = ROOT_DIR / "src"
+if str(SRC_DIR) not in sys.path:
+    sys.path.append(str(SRC_DIR))
+
+from rlproject.highway_env_wrapper import HighwayV0Env
 
 
 # ================ CONFIG ================

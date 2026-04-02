@@ -6,24 +6,36 @@ Comparaison entre une implémentation personnalisée de DQN et la bibliothèque 
 
 Le projet compare deux approches pour entraîner un agent de conduite autonome:
 
-1. **DQN Personnalisé** (`dqn_agent.py`): Implémentation manuelle avec Dueling DQN et Double DQN
+1. **DQN Personnalisé** (`src/rlproject/dqn_agent.py`): Implémentation manuelle avec Dueling DQN et Double DQN
 2. **Stable Baselines3**: Bibliothèque optimisée pour l'apprentissage par renforcement
 
 ### Structure des fichiers
 
 ```
-shared_core_config.py        # Configuration partagée pour l'environnement
-highway_env_wrapper.py       # Wrapper pour Highway-v0
-dqn_agent.py                 # Agent DQN personnalisé avec architecture Dueling
-replay_buffer.py             # Buffer de rejeu pour la mémorisation
-train_dqn_custom.py          # Script d'entraînement DQN personnalisé
-train_stable_baselines.py    # Script d'entraînement Stable Baselines3
-test_dqn_custom.py           # Évaluation de l'agent DQN
-test_stable_baselines.py     # Évaluation de Stable Baselines3
-compare_agents.py            # Comparaison des performances
-checkpoints_custom/          # Sauvegardes du modèle DQN
-checkpoints_sb3/             # Sauvegardes du modèle Stable Baselines3
+src/rlproject/               # Code coeur (agent, buffer, wrapper, config)
+    dqn_agent.py
+    replay_buffer.py
+    highway_env_wrapper.py
+    shared_core_config.py
+scripts/                     # Points d'entree (entrainement, eval, comparaison)
+    train_dqn_custom.py
+    train_stable_baselines.py
+    test_dqn_custom.py
+    test_stable_baselines.py
+    compare_agents.py
+    evaluate_multiseed.py
+    plot_training_curves.py
+    record_rollout.py
+checkpoints_custom/          # Sauvegardes du modele DQN
+checkpoints_sb3/             # Sauvegardes du modele Stable Baselines3
+comparison_results/          # Resultats d'evaluation et figures
+analysis/                    # Notes et gabarits d'analyse
 ```
+
+Cette organisation separe le code coeur (importable) des points d'entree pour
+les experiments. Cela clarifie ce qui est reutilisable (package rlproject) et
+ce qui est executable (scripts/), tout en gardant les sorties dans des dossiers
+dedies.
 
 ---
 
@@ -107,7 +119,7 @@ Stable Baselines3 est une bibliothèque optimisée offrant une implémentation p
 
 ### Pour l'Agent DQN Personnalisé
 
-#### Apprentissage (`dqn_agent.py`)
+#### Apprentissage (`src/rlproject/dqn_agent.py`)
 
 | Hyperparamètre | Valeur défaut | Impact |
 |---|---|---|
@@ -116,7 +128,7 @@ Stable Baselines3 est une bibliothèque optimisée offrant une implémentation p
 | `batch_size` | 32 | Plus petit pour mises à jour graduelles. Augmenter si GPU disponible (32→64) |
 | `update_frequency` | 50 | Fréquence de copie du target network. Réduire si instabilité (50→100) |
 
-#### Exploration (`dqn_agent.py`)
+#### Exploration (`src/rlproject/dqn_agent.py`)
 
 | Hyperparamètre | Valeur défaut | Impact |
 |---|---|---|
@@ -124,7 +136,7 @@ Stable Baselines3 est une bibliothèque optimisée offrant une implémentation p
 | `epsilon_min` | 0.02 | Exploration minimale (2%). Augmenter pour plus d'aléatoire en fin d'entraînement |
 | `epsilon_decay` | 0.99 | Décroissance par épisode. Augmenter (0.99→0.995) pour exploration plus longue |
 
-#### Entraînement (`train_dqn_custom.py`)
+#### Entraînement (`scripts/train_dqn_custom.py`)
 
 | Hyperparamètre | Valeur défaut | Impact |
 |---|---|---|
@@ -156,7 +168,7 @@ update_frequency = 50
 replay_buffer capacity = 1M
 ```
 
-### Pour Stable Baselines3 (`train_stable_baselines.py`)
+### Pour Stable Baselines3 (`scripts/train_stable_baselines.py`)
 
 | Hyperparamètre | Configuration |
 |---|---|
@@ -228,7 +240,7 @@ Pour tester avec des configurations différentes, modifier ces paramètres via `
 ### Entraîner l'agent DQN personnalisé
 
 ```bash
-python train_dqn_custom.py
+python scripts/train_dqn_custom.py
 ```
 
 **Sorties:**
@@ -238,7 +250,7 @@ python train_dqn_custom.py
 ### Entraîner avec Stable Baselines3
 
 ```bash
-python train_stable_baselines.py
+python scripts/train_stable_baselines.py
 ```
 
 **Sorties:**
@@ -248,9 +260,9 @@ python train_stable_baselines.py
 ### Évaluer les modèles
 
 ```bash
-python test_dqn_custom.py          # Teste le DQN personnalisé
-python test_stable_baselines.py    # Teste Stable Baselines3
-python compare_agents.py           # Compare les deux approches
+python scripts/test_dqn_custom.py          # Teste le DQN personnalisé
+python scripts/test_stable_baselines.py    # Teste Stable Baselines3
+python scripts/compare_agents.py           # Compare les deux approches
 ```
 
 ---

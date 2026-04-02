@@ -2,14 +2,21 @@
 
 import argparse
 import os
+import sys
+from pathlib import Path
 
 import numpy as np
 import torch
 from gymnasium.wrappers import RecordVideo
-
-from highway_env_wrapper import HighwayV0Env
-from dqn_agent import DQNAgent
 from stable_baselines3 import DQN as DQN_SB3
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+SRC_DIR = ROOT_DIR / "src"
+if str(SRC_DIR) not in sys.path:
+    sys.path.append(str(SRC_DIR))
+
+from rlproject.highway_env_wrapper import HighwayV0Env
+from rlproject.dqn_agent import DQNAgent
 
 
 def record_custom(model_path, output_dir, episodes, seed):

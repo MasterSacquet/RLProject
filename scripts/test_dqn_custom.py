@@ -5,11 +5,20 @@ Script de test pour modèle DQN personnalisé entraîné
 Permet de charger un modèle pré-entraîné et de l'évaluer
 """
 
+import os
+import sys
+from pathlib import Path
+
 import numpy as np
 import torch
-from highway_env_wrapper import HighwayV0Env
-from dqn_agent import DQNAgent
-import os
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+SRC_DIR = ROOT_DIR / "src"
+if str(SRC_DIR) not in sys.path:
+    sys.path.append(str(SRC_DIR))
+
+from rlproject.highway_env_wrapper import HighwayV0Env
+from rlproject.dqn_agent import DQNAgent
 
 
 # ================ CONFIG ================

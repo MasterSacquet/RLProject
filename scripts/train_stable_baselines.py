@@ -4,13 +4,22 @@
 Script d'entraînement pour Stable-Baselines3 DQN
 """
 
-import os
 import json
+import os
+import sys
 import time  # ⬆️ Ajouté pour mesurer le temps d'entraînement
+from pathlib import Path
+
 import numpy as np
-from highway_env_wrapper import HighwayV0Env
 from stable_baselines3 import DQN
 from stable_baselines3.common.callbacks import BaseCallback, EvalCallback
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+SRC_DIR = ROOT_DIR / "src"
+if str(SRC_DIR) not in sys.path:
+    sys.path.append(str(SRC_DIR))
+
+from rlproject.highway_env_wrapper import HighwayV0Env
 
 
 # ================ CONFIG ================
