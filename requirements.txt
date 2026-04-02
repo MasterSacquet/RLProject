@@ -4,3 +4,4 @@ gymnasium
 highway-env
 stable-baselines3
 matplotlib
+gymnasium[other]
