@@ -1,0 +1,6 @@
+torch
+numpy
+gymnasium
+highway-env
+stable-baselines3
+matplotlib
