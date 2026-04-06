@@ -6,7 +6,7 @@
 ## PART 1: CORE TASK (Baseline Comparison)
 
 ### 1.1 DQN Implementation
-- [x] **Custom DQN Agent Implemented** — FINI
+- [x] **Custom DQN Agent Implemented** — FINI (Simon)
   - Dueling DQN architecture
   - Double DQN with target network
   - Replay buffer
@@ -14,22 +14,22 @@
   - Status: FINI
 
 ### 1.2 Training Infrastructure
-- [x] **Shared Configuration** — FINI
+- [x] **Shared Configuration** — FINI (Simon)
   - Environment: highway-v0
   - Observation: Kinematics
   - Actions: DiscreteMetaAction
   - Config file: [src/rlproject/shared_core_config.py](src/rlproject/shared_core_config.py)
   - Status: FINI
 
-- [x] **Training Scripts** — FINI
+- [x] **Training Scripts** — FINI (Simon)
   - Custom DQN training: [scripts/train_dqn_custom.py](scripts/train_dqn_custom.py)
   - Stable-Baselines3 training: [scripts/train_stable_baselines.py](scripts/train_stable_baselines.py)
   - Checkpoints saved in: `checkpoints_custom/` and `checkpoints_sb3/`
   - Status: FINI
 
 ### 1.3 Quantitative Evaluation (50 runs per seed)
-- [x] **Multi-Seed Evaluation** — FINI
-  - Seeds: 0, 1, 3 (at least 3 as required)
+- [x] **Multi-Seed Evaluation** — FINI (Juliette)
+  - Seeds: 0, 1, 3 (at least 3 as required) 
   - Episodes per seed: 50
   - Script: [scripts/evaluate_multiseed.py](scripts/evaluate_multiseed.py)
   - Results table with mean ± std:
@@ -45,7 +45,7 @@
   - Status: FINI
 
 ### 1.4 Training Curves
-- [x] **Generate Training Curves** — FINI
+- [x] **Generate Training Curves** — FINI (Simon + Juliette)
   - Script: [scripts/plot_training_curves.py](scripts/plot_training_curves.py)
   - Input: `metrics.json` from `checkpoints_custom/` and `checkpoints_sb3/`
   - Output: PNG plots in `comparison_results/`
@@ -59,7 +59,7 @@
   - File: [analysis/qualitative_behavior.md](analysis/qualitative_behavior.md) 
   - Status: EN COURS 
 
-- [x] **Recorded Rollouts** — FINI
+- [x] **Recorded Rollouts** — FINI (Juliette)
   - Script: [scripts/record_rollout.py](scripts/record_rollout.py)
   - One rollout per agent (Custom DQN, SB3)
   - Seeds: 0, 1, 3
@@ -75,7 +75,7 @@
   - Status: EN COURS
 
 ### 1.7 Comparison: Custom vs SB3
-- [x] **Fair Comparison Protocol** — FINI
+- [x] **Fair Comparison Protocol** — FINI (Juliette)
   - Same config (shared_core_config.py)
   - Same seeds for evaluation
   - Same number of episodes (50 per seed)
@@ -230,102 +230,6 @@
     - Quick how-to for running each experiment
   - File: [README.md](README.md)
   - Status: A FAIRE
-
-### 3.4 Individual Report (Personal Contribution)
-- [ ] **Write Individual Report** — A FAIRE
-  - Structure:
-    1. Context & Objective (1/2 page)
-    2. Personal Contribution (1 page): which experiments you ran, what analysis you did
-    3. Results (1 page): tables and key findings
-    4. Analysis (1/2 page): qualitative behavior + failure modes
-    5. Discussion (1/2 page): design choices, limitations, future work
-  - Evidence: links to scripts, figures, tables in the repo
-  - File: `REPORT_JULIETTE.md` (or similar)
-  - Status: A FAIRE
-
----
-
-## Execution Checklist
-
-### Core Task Remaining Tasks:
-```
-[ ] 1. Fill in qualitative_behavior.md (watch rollouts, describe behaviors)
-[ ] 2. Identify and write failure mode analysis in rollout_notes.md
-[ ] 3. Write CORE_RESULTS_SUMMARY.md with findings and interpretation
-```
-
-### Extension Execution Checklist:
-```
-[ ] 1. Create src/rlproject/reward_shaper.py with safety-aware reward logic
-[ ] 2. Create train_dqn_safety_aware.py training script
-[ ] 3. Train DQN-Conservative variant (seed 0, 1, 3)
-[ ] 4. Train DQN-Moderate variant (seed 0, 1, 3)
-[ ] 5. Create src/rlproject/safety_metrics.py with evaluation functions
-[ ] 6. Run evaluation on all three agents (baseline + 2 safety variants)
-[ ] 7. Generate safety_aware_eval_*.md results table
-[ ] 8. Generate comparative plots (training curves, tradeoff scatter, bar charts)
-[ ] 9. Record rollouts for safety-aware agents
-[ ] 10. Write safety_aware_behavior.md (qualitative comparison)
-[ ] 11. Write safety_aware_failure_modes.md (failure mode analysis)
-[ ] 12. Write EXTENSION_RESULTS.md with key findings
-[ ] 13. Write extension_discussion.md with interpretation
-[ ] 14. [OPTIONAL] Run generalization experiment (different traffic densities)
-```
-
-### Finalization:
-```
-[ ] 1. Update README.md with results sections
-[ ] 2. Write individual report (REPORT_JULIETTE.md)
-[ ] 3. Final review: check all links, file names, figures
-[ ] 4. Commit and push to repository
-```
-
----
-
-## File Structure (Expected Output)
-
-```
-RLProject/
-├── src/rlproject/
-│   ├── reward_shaper.py          [NEW]
-│   ├── safety_metrics.py          [NEW]
-│   └── ... (existing files)
-├── scripts/
-│   ├── train_dqn_safety_aware.py  [NEW]
-│   └── ... (existing files)
-├── checkpoints_safety_aware_conservative/  [NEW]
-├── checkpoints_safety_aware_moderate/      [NEW]
-├── comparison_results/
-│   ├── safety_aware_eval_*.md     [NEW]
-│   ├── safety_aware_*.png         [NEW]
-│   ├── EXTENSION_RESULTS.md       [NEW]
-│   └── ... (existing files)
-├── analysis/
-│   ├── safety_aware_behavior.md         [NEW]
-│   ├── safety_aware_failure_modes.md    [NEW]
-│   ├── extension_discussion.md           [NEW]
-│   └── ... (existing files)
-├── CORE_RESULTS_SUMMARY.md        [NEW]
-├── EXTENSION_RESULTS_SUMMARY.md   [NEW]
-├── REPORT_JULIETTE.md             [NEW]
-└── README.md                      [UPDATED]
-```
-
----
-
-## Estimated Timeline
-
-- **Core Task Remaining**: 3-4 hours (qualitative analysis + failure modes + summary)
-- **Extension Execution**: 6-8 hours
-  - Reward shaping implementation: 1 hour
-  - Training 2 new variants (3 seeds each): 2-3 hours (can run parallel)
-  - Safety metrics + evaluation: 1 hour
-  - Generating plots and tables: 1 hour
-  - Writing analysis and discussion: 1-2 hours
-
-- **Finalization**: 1 hour (README, report, review)
-
-**Total Effort**: ~10-13 hours for complete deliverable
 
 ---
 
