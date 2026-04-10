@@ -53,11 +53,11 @@
   - Status: FINI
 
 ### 1.5 Qualitative Analysis
-- [ ] **Behavior Analysis** — EN COURS (Juliette)
+- [x] **Behavior Analysis** — FINI (Juliette)
   - Describe typical behavior of Custom DQN vs SB3
   - Identify common decision patterns (lane changes, acceleration, etc.)
   - File: [analysis/qualitative_behavior.md](analysis/qualitative_behavior.md) 
-  - Status: EN COURS 
+  - Status: FINI 
 
 - [x] **Recorded Rollouts** — FINI (Juliette)
   - Script: [scripts/record_rollout.py](scripts/record_rollout.py)
@@ -67,12 +67,12 @@
   - Status: FINI (videos recorded, waiting for viewing/analysis)
 
 ### 1.6 Failure Mode Analysis
-- [ ] **Identify and Analyze One Failure Mode** — EN COURS (Juliette)
+- [x] **Identify and Analyze One Failure Mode** — FINI(Juliette)
   - Watch recorded rollouts and identify recurring issues
   - Possible failure modes: collisions, inefficient lane changes, getting stuck, etc.
   - Provide detailed explanation of **why** it happens (reward shaping, exploration, etc.)
   - File: [analysis/rollout_notes.md](analysis/rollout_notes.md)
-  - Status: EN COURS
+  - Status: FINI
 
 ### 1.7 Comparison: Custom vs SB3
 - [x] **Fair Comparison Protocol** — FINI (Juliette)
@@ -84,7 +84,7 @@
   - Status: FINI
 
 ### 1.8 Documentation (Core Results)
-- [ ] **Summary Document** — A FAIRE
+- [x] **Summary Document** — A FAIRE (Juliette)
   - Short summary/discussion of design choices
   - Key insights: architecture choices, training stability, etc.
   - Status: A FAIRE
@@ -103,14 +103,14 @@
 - Measurable impact: we can quantify collision rates, safety metrics, and performance tradeoff
 
 ### 2.1 Reward Shaping Implementation
-- [ ] **Define Safety-Aware Reward Function** — A FAIRE
+- [x] **Define Safety-Aware Reward Function** — FINI (Juliette)
   - Baseline reward: original highway-v0 reward
   - Safety-Aware reward: baseline - λ * collision_penalty - μ * crash_indicator
   - Create two variants:
     - Conservative (high safety weight): λ=10, μ=50
     - Moderate (balanced): λ=5, μ=30
-  - Document the formulation: [src/rlproject/reward_shaper.py](src/rlproject/reward_shaper.py) (new file)
-  - Status: A FAIRE
+  - Document the formulation: [src/rlproject/reward_shaper.py](src/rlproject/reward_shaper.py)
+  - Status: FINI
 
 - [ ] **Modify DQN Training Loop** — A FAIRE
   - Create `train_dqn_safety_aware.py` script
