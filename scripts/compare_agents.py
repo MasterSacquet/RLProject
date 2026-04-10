@@ -61,7 +61,7 @@ def evaluate_agent(agent, env, num_episodes, agent_name="Agent"):
     rewards = []
     lengths = []
     
-    print(f"\n🧪 Évaluation {agent_name} ({num_episodes} épisodes)...")
+    print(f"\n Évaluation {agent_name} ({num_episodes} épisodes)...")
     
     for episode in range(num_episodes):
         obs, _ = env.reset()
@@ -113,7 +113,7 @@ state_dim = 50  # 10 véhicules × 5 features
 action_dim = env.action_space.n
 
 # ================ CHARGER AGENT CUSTOM ================
-print("\n📦 Chargement Agent Custom DQN...")
+print("\n Chargement Agent Custom DQN...")
 if os.path.exists(CUSTOM_MODEL_PATH):
     custom_agent = DQNAgent(state_dim, action_dim)
     checkpoint = torch.load(CUSTOM_MODEL_PATH, map_location=custom_agent.device, weights_only=False)
@@ -126,13 +126,13 @@ if os.path.exists(CUSTOM_MODEL_PATH):
     )
     results["custom_dqn"]["rewards"] = custom_rewards
     results["custom_dqn"]["episode_lengths"] = custom_lengths
-    print("   ✅ Agent Custom DQN chargé")
+    print("    Agent Custom DQN chargé")
 else:
-    print(f"   ❌ Modèle non trouvé: {CUSTOM_MODEL_PATH}")
+    print(f"    Modèle non trouvé: {CUSTOM_MODEL_PATH}")
     custom_rewards = None
 
 # ================ CHARGER AGENT STABLE-BASELINES ================
-print("\n📦 Chargement Agent Stable-Baselines3...")
+print("\n Chargement Agent Stable-Baselines3...")
 if os.path.exists(SB3_MODEL_PATH):
     sb3_agent = DQN_SB3.load(SB3_MODEL_PATH, env=env)
     
@@ -141,16 +141,16 @@ if os.path.exists(SB3_MODEL_PATH):
     )
     results["stable_baselines"]["rewards"] = sb3_rewards
     results["stable_baselines"]["episode_lengths"] = sb3_lengths
-    print("   ✅ Agent Stable-Baselines3 chargé")
+    print("    Agent Stable-Baselines3 chargé")
 else:
-    print(f"   ⚠️  Modèle non trouvé: {SB3_MODEL_PATH}")
+    print(f"     Modèle non trouvé: {SB3_MODEL_PATH}")
     sb3_rewards = None
 
 env.close()
 
 # ================ STATISTIQUES ================
 print("\n" + "=" * 60)
-print("📊 RÉSULTATS ET STATISTIQUES")
+print(" RÉSULTATS ET STATISTIQUES")
 print("=" * 60)
 
 if custom_rewards:
@@ -167,7 +167,7 @@ if custom_rewards:
         "median": float(np.median(custom_rewards))
     }
     
-    print("\n🤖 Agent Custom DQN:")
+    print("\n Agent Custom DQN:")
     print(f"   ├─ Moyenne:  {custom_mean:7.2f}")
     print(f"   ├─ Std Dev:  {custom_std:7.2f}")
     print(f"   ├─ Min:      {custom_min:7.2f}")
@@ -188,7 +188,7 @@ if sb3_rewards:
         "median": float(np.median(sb3_rewards))
     }
     
-    print("\n🚀 Agent Stable-Baselines3:")
+    print("\n Agent Stable-Baselines3:")
     print(f"   ├─ Moyenne:  {sb3_mean:7.2f}")
     print(f"   ├─ Std Dev:  {sb3_std:7.2f}")
     print(f"   ├─ Min:      {sb3_min:7.2f}")
@@ -197,7 +197,7 @@ if sb3_rewards:
 
 # ================ COMPARAISON ================
 if custom_rewards and sb3_rewards:
-    print("\n⚖️  COMPARAISON:")
+    print("\n COMPARAISON:")
     diff = sb3_mean - custom_mean
     pct_diff = (diff / abs(custom_mean)) * 100 if custom_mean != 0 else 0
     
@@ -219,11 +219,11 @@ results_file = os.path.join(RESULTS_PATH, f"comparison_{datetime.now().strftime(
 with open(results_file, 'w') as f:
     json.dump(results, f, indent=2)
 
-print(f"\n💾 Résultats sauvegardés: {results_file}")
+print(f"\n Résultats sauvegardés: {results_file}")
 
 # ================ VISUALISATION ================
 if custom_rewards and sb3_rewards:
-    print("\n📈 Génération des graphiques...")
+    print("\n Génération des graphiques...")
     
     fig, axes = plt.subplots(2, 2, figsize=(14, 10))
     fig.suptitle("Comparaison DQN Custom vs Stable-Baselines3", fontsize=16, fontweight='bold')
@@ -272,8 +272,8 @@ if custom_rewards and sb3_rewards:
     
     plot_path = os.path.join(RESULTS_PATH, f"comparison_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png")
     plt.savefig(plot_path, dpi=150, bbox_inches='tight')
-    print(f"📊 Graphique sauvegardé: {plot_path}")
+    print(f" Graphique sauvegardé: {plot_path}")
     plt.close()
 
-print("\n✅ Comparaison terminée!")
+print("\n Comparaison terminée!")
 print("=" * 60)

@@ -32,7 +32,7 @@ SAVE_INTERVAL = 50
 os.makedirs(SAVE_PATH, exist_ok=True)
 
 # ================ SETUP ================
-print("🚀 Préparation de l'environnement...")
+print(" Préparation de l'environnement...")
 env = HighwayV0Env()
 obs, _ = env.reset()
 
@@ -57,7 +57,7 @@ metrics = {
 }
 
 # ================ ENTRAÎNEMENT ================
-print(f"\n📚 Entraînement sur {NUM_EPISODES} épisodes...")
+print(f"\n Entraînement sur {NUM_EPISODES} épisodes...")
 
 for episode in range(NUM_EPISODES):
     state, _ = env.reset()
@@ -125,7 +125,7 @@ for episode in range(NUM_EPISODES):
             "epsilon": agent.epsilon,
             "episode": episode
         }, os.path.join(SAVE_PATH, f"checkpoint_ep{episode + 1}.pth"))
-        print(f"💾 Checkpoint sauvegardé à l'épisode {episode + 1}")
+        print(f" Checkpoint sauvegardé à l'épisode {episode + 1}")
 
 # ================ SAUVEGARDE FINALE ================
 torch.save({
@@ -139,19 +139,19 @@ with open(os.path.join(SAVE_PATH, "metrics.json"), 'w') as f:
 
 # Afficher un résumé
 print("\n" + "="*60)
-print("✅ ENTRAÎNEMENT TERMINÉ")
+print(" ENTRAÎNEMENT TERMINÉ")
 print("="*60)
-print(f"📊 Épisodes: {NUM_EPISODES}")
-print(f"🏆 Meilleure récompense: {best_reward:.2f} (épisode {best_episode + 1})")
-print(f"📈 Récompense moyenne (derniers 100): {np.mean(metrics['rewards'][-100:]):.2f}")
-print(f"📉 Loss moyenne (derniers 10): {np.mean(metrics['losses'][-10:]):.4f}")
-print(f"💾 Modèles sauvegardés dans: {SAVE_PATH}/")
-print(f"📋 Métriques sauvegardées dans: {SAVE_PATH}/metrics.json")
+print(f" Épisodes: {NUM_EPISODES}")
+print(f" Meilleure récompense: {best_reward:.2f} (épisode {best_episode + 1})")
+print(f" Récompense moyenne (derniers 100): {np.mean(metrics['rewards'][-100:]):.2f}")
+print(f" Loss moyenne (derniers 10): {np.mean(metrics['losses'][-10:]):.4f}")
+print(f" Modèles sauvegardés dans: {SAVE_PATH}/")
+print(f" Métriques sauvegardées dans: {SAVE_PATH}/metrics.json")
 print("="*60)
 
-print(f"\n✅ Modèle sauvegardé: {SAVE_PATH}/best_model.pth")
-print(f"📊 Métriques sauvegardées: {SAVE_PATH}/metrics.json")
-print(f"🏅 Meilleure récompense: {best_reward:.2f}")
+print(f"\n Modèle sauvegardé: {SAVE_PATH}/best_model.pth")
+print(f" Métriques sauvegardées: {SAVE_PATH}/metrics.json")
+print(f"Meilleure récompense: {best_reward:.2f}")
 
 env.close()
-print("🏁 Entraînement terminé!")
+print(" Entraînement terminé!")

@@ -32,7 +32,7 @@ os.makedirs(SAVE_PATH, exist_ok=True)
 
 # Créer l'environnement
 wrapper = HighwayV0Env(render_mode="human" if RENDER else None)
-env = wrapper.env  # ✅ Utiliser directement l'env Gymnasium
+env = wrapper.env  #  Utiliser directement l'env Gymnasium
 
 # Déterminer les dimensions
 obs, _ = env.reset()
@@ -43,17 +43,17 @@ action_dim = env.env.action_space.n
 model_path = os.path.join(SAVE_PATH, MODEL_NAME)
 
 if os.path.exists(model_path):
-    print(f"📦 Chargement du modèle: {model_path}")
+    print(f"Chargement du modèle: {model_path}")
     agent = DQNAgent(state_dim, action_dim)
     checkpoint = torch.load(model_path, map_location=agent.device, weights_only=False)
     agent.q_net.load_state_dict(checkpoint["model_state_dict"])
     agent.epsilon = 0.0  # Désactiver exploration
 else:
-    print(f"❌ Erreur: Modèle introuvable à {model_path}")
+    print(f" Erreur: Modèle introuvable à {model_path}")
     exit(1)
 
 # ================ TEST/ÉVALUATION ================
-print(f"\n🧪 Évaluation sur {NUM_TEST_EPISODES} épisodes...")
+print(f"\nÉvaluation sur {NUM_TEST_EPISODES} épisodes...")
 
 episode_rewards = []
 
@@ -75,11 +75,11 @@ for episode in range(NUM_TEST_EPISODES):
 mean_reward = np.mean(episode_rewards)
 std_reward = np.std(episode_rewards)
 
-print(f"\n📊 Résultats:")
+print(f"\n Résultats:")
 print(f"   Récompense moyenne: {mean_reward:.2f} ± {std_reward:.2f}")
 
 # ================ VISUALISATION DÉTAILLÉE ================
-print(f"\n🎬 Exécutions détaillées (premiers 3 épisodes):")
+print(f"\nExécutions détaillées (premiers 3 épisodes):")
 
 for episode in range(3):
     obs, _ = env.reset()
@@ -106,4 +106,4 @@ for episode in range(3):
     print(f"   Episode {episode + 1}: Reward={episode_reward:.2f}, Steps={steps}")
 
 env.close()
-print("\n✅ Test terminé!")
+print("\n Test terminé!")

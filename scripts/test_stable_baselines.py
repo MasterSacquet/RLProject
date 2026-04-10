@@ -32,16 +32,16 @@ os.makedirs(SAVE_PATH, exist_ok=True)
 
 # Créer l'environnement
 wrapper = HighwayV0Env(render_mode="human" if RENDER else None)
-env = wrapper.env  # ✅ Utiliser directement l'env Gymnasium
+env = wrapper.env  #  Utiliser directement l'env Gymnasium
 
 model_path = os.path.join(SAVE_PATH, MODEL_NAME)
 
 # ================ CHARGER OU CRÉER LE MODÈLE ================
 if os.path.exists(f"{model_path}.zip"):
-    print(f"📦 Chargement du modèle: {model_path}")
+    print(f"Chargement du modèle: {model_path}")
     model = DQN.load(model_path, env=env)
 else:
-    print("⚠️  Aucun modèle trouvé. Création d'un nouveau modèle DQN...")
+    print("  Aucun modèle trouvé. Création d'un nouveau modèle DQN...")
     print("   Pour un vrai test, utilisez un modèle entraîné!")
     
     # Créer un nouveau modèle (à entraîner)
@@ -59,13 +59,13 @@ else:
         verbose=1
     )
     
-    print("🚀 Entraînement rapide sur 5000 steps...")
+    print(" Entraînement rapide sur 5000 steps...")
     model.learn(total_timesteps=5000)
     model.save(model_path)
-    print(f"✅ Modèle sauvegardé: {model_path}")
+    print(f" Modèle sauvegardé: {model_path}")
 
 # ================ TEST/ÉVALUATION ================
-print(f"\n🧪 Évaluation sur {NUM_TEST_EPISODES} épisodes...")
+print(f"\nÉvaluation sur {NUM_TEST_EPISODES} épisodes...")
 
 mean_reward, std_reward = evaluate_policy(
     model,
@@ -75,11 +75,11 @@ mean_reward, std_reward = evaluate_policy(
     render=RENDER
 )
 
-print(f"\n📊 Résultats:")
+print(f"\n Résultats:")
 print(f"   Récompense moyenne: {mean_reward:.2f} ± {std_reward:.2f}")
 
 # ================ VISUALISATION DÉTAILLÉE ================
-print(f"\n🎬 Exécutions détaillées (premiers 3 épisodes):")
+print(f"\nExécutions détaillées (premiers 3 épisodes):")
 
 for episode in range(3):
     obs, _ = env.reset()
@@ -106,4 +106,4 @@ for episode in range(3):
     print(f"   Episode {episode + 1}: Reward={episode_reward:.2f}, Steps={steps}")
 
 env.close()
-print("\n✅ Test terminé!")
+print("\n Test terminé!")

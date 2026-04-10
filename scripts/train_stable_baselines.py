@@ -7,7 +7,7 @@ Script d'entraînement pour Stable-Baselines3 DQN
 import json
 import os
 import sys
-import time  # ⬆️ Ajouté pour mesurer le temps d'entraînement
+import time 
 from pathlib import Path
 
 import numpy as np
@@ -42,6 +42,7 @@ class MetricsCallback(BaseCallback):
             "timesteps": [],
             "episode_rewards": [],
             "episode_lengths": [],
+            "loss_timesteps": [],
             "losses": []
         }
         self.episode_count = 0
@@ -56,6 +57,13 @@ class MetricsCallback(BaseCallback):
                 self.metrics["episode_rewards"].append(float(episode_info["r"]))
                 self.metrics["episode_lengths"].append(int(episode_info["l"]))
                 self.episode_count += 1
+
+        # train/loss est logge par SB3 pendant les updates de gradient.
+        logger_values = getattr(self.model.logger, "name_to_value", {})
+        train_loss = logger_values.get("train/loss")
+        if train_loss is not None:
+            self.metrics["loss_timesteps"].append(int(self.num_timesteps))
+            self.metrics["losses"].append(float(train_loss))
         
         # Sauvegarder périodiquement
         if self.n_calls % self.save_interval == 0:
@@ -70,12 +78,12 @@ class MetricsCallback(BaseCallback):
 
 
 # ================ SETUP ================
-print("🚀 Préparation de l'environnement...")
+print(" Préparation de l'environnement...")
 wrapper = HighwayV0Env()
 env = wrapper.env
 
 # ================ CRÉER LE MODÈLE ================
-print("🤖 Création du modèle DQN Stable-Baselines3...")
+print(" Création du modèle DQN Stable-Baselines3...")
 model = DQN(
     "MlpPolicy",
     env,
@@ -96,9 +104,8 @@ model = DQN(
 )
 
 # ================ ENTRAÎNEMENT ================
-# ================ ENTRAÎNEMENT ================
-print(f"\n📚 Entraînement sur {TOTAL_TIMESTEPS} timesteps...")
-print("⏱️ Configuration optimisée pour apprentissage rapide et stable...\n")
+print(f"\n Entraînement sur {TOTAL_TIMESTEPS} timesteps...")
+print(" Configuration optimisée pour apprentissage rapide et stable...\n")
 
 metrics_callback = MetricsCallback(SAVE_PATH, SAVE_INTERVAL)
 
@@ -127,17 +134,17 @@ model.learn(
 elapsed_time = time.time() - start_time
 hours, remainder = divmod(elapsed_time, 3600)
 minutes, seconds = divmod(remainder, 60)
-print(f"\n✅ Entraînement complété en {int(hours)}h {int(minutes)}m {int(seconds)}s")
+print(f"\n Entraînement complété en {int(hours)}h {int(minutes)}m {int(seconds)}s")
 
 # ================ SAUVEGARDE ================
 model_path = os.path.join(SAVE_PATH, MODEL_NAME)
 model.save(model_path)
-print(f"\n✅ Modèle sauvegardé: {model_path}.zip")
+print(f"\n Modèle sauvegardé: {model_path}.zip")
 
 # Sauvegarder les métriques
 metrics_callback.save_metrics()
-print(f"📊 Métriques sauvegardées: {SAVE_PATH}/metrics.json")
+print(f" Métriques sauvegardées: {SAVE_PATH}/metrics.json")
 
 eval_env.close()
 env.close()
-print("🏁 Entraînement terminé!")
+print(" Entraînement terminé!")

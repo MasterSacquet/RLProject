@@ -40,6 +40,7 @@ def main():
     sb3_rewards = safe_list(sb3.get("episode_rewards"))
     sb3_losses = safe_list(sb3.get("losses"))
     sb3_timesteps = safe_list(sb3.get("timesteps"))
+    sb3_loss_timesteps = safe_list(sb3.get("loss_timesteps"))
 
     fig, axes = plt.subplots(2, 2, figsize=(14, 9))
     fig.suptitle("Training Curves: Custom DQN vs SB3", fontsize=14, fontweight="bold")
@@ -81,9 +82,10 @@ def main():
     # SB3 loss
     ax = axes[1, 1]
     if sb3_losses:
-        ax.plot(sb3_losses, label="SB3 loss", color="tab:red", alpha=0.7)
+        x = sb3_loss_timesteps if len(sb3_loss_timesteps) == len(sb3_losses) else list(range(len(sb3_losses)))
+        ax.plot(x, sb3_losses, label="SB3 loss", color="tab:red", alpha=0.7)
     ax.set_title("SB3 Loss")
-    ax.set_xlabel("Training step")
+    ax.set_xlabel("Timesteps")
     ax.set_ylabel("Loss")
     ax.grid(alpha=0.3)
     ax.legend()
