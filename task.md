@@ -114,7 +114,7 @@
 
 - [ ] **Modify DQN Training Loop** — A FAIRE
   - Create `train_dqn_safety_aware.py` script
-  - Use reward_shaper in training loop
+  - Use reward_shaper in training loop (voir ce qui a été fait à l'étape précédente) 
   - Train three versions:
     1. Baseline DQN (no shaping) [already exists]
     2. DQN-Conservative (high safety penalty)
