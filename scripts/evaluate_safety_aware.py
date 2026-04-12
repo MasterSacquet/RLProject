@@ -30,7 +30,7 @@ from rlproject.safety_metrics import run_episode, compute_safety_summary
 
 # ================ AGENTS À ÉVALUER ================
 AGENTS = {
-    "baseline":     "checkpoints_custom/best_model.pth",
+    "baseline":     "checkpoints_custom/last_model.pth",
     "conservative": "checkpoints_safety_aware_conservative/best_model.pth",
     "moderate":     "checkpoints_safety_aware_moderate/best_model.pth",
 }
