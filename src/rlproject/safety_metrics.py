@@ -94,10 +94,15 @@ def compute_safety_summary(episodes: list[dict]) -> dict:
         reward_mean, reward_std, reward_min, reward_max, reward_median.
     """
     stats = reward_stats(episodes)
+
+    speeds = [ep["mean_speed"] for ep in episodes if ep["mean_speed"] is not None]
+    mean_speed = float(np.mean(speeds)) if speeds else None
+
     return {
         "collision_rate": collision_rate(episodes),
         "mean_crashes": mean_crashes(episodes),
         "safety_margin": mean_safety_margin(episodes),
+        "mean_speed": mean_speed,
         "reward_mean": stats["mean"],
         "reward_std": stats["std"],
         "reward_min": stats["min"],
@@ -148,6 +153,7 @@ def run_episode(env, select_action, seed=None) -> dict:
     steps = 0
     crashed = False
     min_distance = None
+    speeds = []
     done = False
     truncated = False
 
@@ -164,9 +170,14 @@ def run_episode(env, select_action, seed=None) -> dict:
         if dist is not None:
             min_distance = dist if min_distance is None else min(min_distance, dist)
 
+        speed = info.get("speed")
+        if speed is not None:
+            speeds.append(float(speed))
+
     return {
         "reward": episode_reward,
         "crashed": crashed,
         "min_distance": min_distance,
         "length": steps,
+        "mean_speed":   float(np.mean(speeds)) if speeds else None,
     }

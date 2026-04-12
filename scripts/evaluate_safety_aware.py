@@ -110,41 +110,38 @@ def evaluate_agent(model_path: str, seeds: list[int], num_episodes: int) -> dict
 
 
 # ================ TABLEAU MARKDOWN ================
-
 def build_markdown_table(results: dict, seeds: list[int]) -> str:
     """Génère le tableau de comparaison au format Markdown."""
     lines = [
         "# Safety-Aware Evaluation Results\n",
         "## Par seed\n",
-        "| Agent | Seed | Reward Mean | Reward Std | Collision Rate | Mean Crashes | Safety Margin |",
+        "| Agent | Seed | Reward Mean | Reward Std | Collision Rate | Mean Crashes | Mean Speed |",
         "|---|---|---|---|---|---|---|",
     ]
 
     for agent_name, agent_results in results.items():
         for seed in seeds:
             s = agent_results["per_seed"][str(seed)]["summary"]
-            margin = f"{s['safety_margin']:.3f}" if s["safety_margin"] is not None else "N/A"
+            speed = f"{s['mean_speed']:.2f}" if s["mean_speed"] is not None else "N/A"
             lines.append(
                 f"| {agent_name} | {seed} "
                 f"| {s['reward_mean']:.2f} | {s['reward_std']:.2f} "
-                f"| {s['collision_rate']:.2%} | {s['mean_crashes']:.3f} "
-                f"| {margin} |"
+                f"| {s['collision_rate']:.2%} | {s['mean_crashes']:.3f} | {speed} |"
             )
 
     lines += [
         "\n## Overall (toutes seeds confondues)\n",
-        "| Agent | Reward Mean | Reward Std | Collision Rate | Mean Crashes | Safety Margin |",
+        "| Agent | Reward Mean | Reward Std | Collision Rate | Mean Crashes | Mean Speed |",
         "|---|---|---|---|---|---|",
     ]
 
     for agent_name, agent_results in results.items():
         s = agent_results["overall"]
-        margin = f"{s['safety_margin']:.3f}" if s["safety_margin"] is not None else "N/A"
+        speed = f"{s['mean_speed']:.2f}" if s["mean_speed"] is not None else "N/A"
         lines.append(
             f"| {agent_name} "
             f"| {s['reward_mean']:.2f} | {s['reward_std']:.2f} "
-            f"| {s['collision_rate']:.2%} | {s['mean_crashes']:.3f} "
-            f"| {margin} |"
+            f"| {s['collision_rate']:.2%} | {s['mean_crashes']:.3f} | {speed} |"
         )
 
     return "\n".join(lines)
@@ -171,11 +168,18 @@ def main():
     for agent_name, model_path in AGENTS.items():
         print(f"\n  Évaluation de {agent_name} ({model_path})...")
         if not Path(model_path).exists():
-            print(f"  ⚠️  Checkpoint introuvable : {model_path} — agent ignoré.")
+            print(f"  Checkpoint introuvable : {model_path} — agent ignoré.")
             continue
         all_results[agent_name] = evaluate_agent(model_path, seeds, args.episodes)
+        
+        stamp_partial = datetime.now().strftime("%Y%m%d_%H%M%S")
+        partial_path = os.path.join(args.output_dir, f"partial_{agent_name}_{stamp_partial}.json")
+        with open(partial_path, "w") as f:
+            json.dump(all_results[agent_name], f, indent=2)
+        print(f"  Sauvegarde intermédiaire : {partial_path}")
+        
         overall = all_results[agent_name]["overall"]
-        print(f"  ✅ {agent_name} | reward: {overall['reward_mean']:.2f} ± {overall['reward_std']:.2f} "
+        print(f" {agent_name} | reward: {overall['reward_mean']:.2f} ± {overall['reward_std']:.2f} "
               f"| collision rate: {overall['collision_rate']:.2%}")
 
     # ---- Sauvegarde JSON ----
