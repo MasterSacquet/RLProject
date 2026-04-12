@@ -112,7 +112,7 @@
   - Document the formulation: [src/rlproject/reward_shaper.py](src/rlproject/reward_shaper.py)
   - Status: FINI
 
-- [ ] **Modify DQN Training Loop** — A FAIRE
+- [ ] **Modify DQN Training Loop** — FINI (Manon)
   - Create `train_dqn_safety_aware.py` script
   - Use reward_shaper in training loop (voir ce qui a été fait à l'étape précédente) 
   - Train three versions:
@@ -121,19 +121,19 @@
     3. DQN-Moderate (balanced)
   - Save checkpoints: `checkpoints_safety_aware_conservative/` and `checkpoints_safety_aware_moderate/`
   - Save metrics with additional safety metrics (crash count, near-miss events)
-  - Status: A FAIRE
+  - Status: FINI
 
 ### 2.2 Safety Metrics Definition
-- [ ] **Implement Safety Evaluation Metrics** — A FAIRE
+- [ ] **Implement Safety Evaluation Metrics** — FINI (Albane)
   - Collision rate: % of episodes with >= 1 collision
   - Mean collisions per episode
   - Min distance to obstacles (proxy for safety margin)
   - Reward per episode (performance)
   - Create utility functions in: [src/rlproject/safety_metrics.py](src/rlproject/safety_metrics.py) (new file)
-  - Status: A FAIRE
+  - Status: FINI
 
 ### 2.3 Evaluation of Safety-Aware Variants
-- [ ] **Run Evaluation on All Variants** — A FAIRE
+- [ ] **Run Evaluation on All Variants** — FINI (Manon)
   - Evaluate all three agents:
     1. Baseline custom DQN
     2. DQN-Conservative (safety-aware)
@@ -141,14 +141,14 @@
   - Protocol: same 3 seeds (0, 1, 3), 50 episodes per seed
   - Metrics: reward (mean, std), collision_rate, mean_crashes, safety_margin
   - Output table: `comparison_results/safety_aware_eval_*.md`
-  - Status: A FAIRE
+  - Status: FINI
 
-- [ ] **Generate Comparative Plots** — A FAIRE
+- [ ] **Generate Comparative Plots** — FINI (Manon)
   - Training curves for all three agents (same figure)
   - Safety metrics vs performance tradeoff (scatter plot or curves)
   - Collision rate comparison (bar chart)
   - Output: `comparison_results/safety_aware_*.png`
-  - Status: A FAIRE
+  - Status: FINI
 
 ### 2.4 Behavior Analysis for Safety-Aware Agents
 - [ ] **Qualitative Observation** — A FAIRE
