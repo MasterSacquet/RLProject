@@ -112,7 +112,7 @@
   - Document the formulation: [src/rlproject/reward_shaper.py](src/rlproject/reward_shaper.py)
   - Status: FINI
 
-- [ ] **Modify DQN Training Loop** — FINI (Manon)
+- [x] **Modify DQN Training Loop** — FINI (Manon)
   - Create `train_dqn_safety_aware.py` script
   - Use reward_shaper in training loop (voir ce qui a été fait à l'étape précédente) 
   - Train three versions:
@@ -124,7 +124,7 @@
   - Status: FINI
 
 ### 2.2 Safety Metrics Definition
-- [ ] **Implement Safety Evaluation Metrics** — FINI (Albane)
+- [x] **Implement Safety Evaluation Metrics** — FINI (Albane)
   - Collision rate: % of episodes with >= 1 collision
   - Mean collisions per episode
   - Min distance to obstacles (proxy for safety margin)
@@ -133,7 +133,7 @@
   - Status: FINI
 
 ### 2.3 Evaluation of Safety-Aware Variants
-- [ ] **Run Evaluation on All Variants** — FINI (Manon)
+- [x] **Run Evaluation on All Variants** — FINI (Manon et Albane)
   - Evaluate all three agents:
     1. Baseline custom DQN
     2. DQN-Conservative (safety-aware)
@@ -143,7 +143,7 @@
   - Output table: `comparison_results/safety_aware_eval_*.md`
   - Status: FINI
 
-- [ ] **Generate Comparative Plots** — FINI (Manon)
+- [x] **Generate Comparative Plots** — FINI (Manon)
   - Training curves for all three agents (same figure)
   - Safety metrics vs performance tradeoff (scatter plot or curves)
   - Collision rate comparison (bar chart)

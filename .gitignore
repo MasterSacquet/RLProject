@@ -4,3 +4,6 @@ venv/
 .venv/
 env/
 juliette.md
+analysis/qualitative_behavior.md
+analysis/rollout_notes.md
+analysis/training_curves_note.md
