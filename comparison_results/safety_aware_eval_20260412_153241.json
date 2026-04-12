@@ -1,0 +1,3340 @@
+{
+  "seeds": [
+    0,
+    1,
+    3
+  ],
+  "episodes": 50,
+  "results": {
+    "baseline": {
+      "per_seed": {
+        "0": {
+          "summary": {
+            "collision_rate": 0.2,
+            "mean_crashes": 0.2,
+            "safety_margin": null,
+            "mean_speed": 21.605674743412848,
+            "reward_mean": 18.755896180427268,
+            "reward_std": 5.066965790345813,
+            "reward_min": 4.0056818181818175,
+            "reward_max": 24.193147038113217,
+            "reward_median": 20.713728652042516
+          },
+          "episodes": [
+            {
+              "reward": 20.736511042772847,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.534351668287446
+            },
+            {
+              "reward": 10.974855907119679,
+              "crashed": true,
+              "min_distance": null,
+              "length": 15,
+              "mean_speed": 22.746915995707067
+            },
+            {
+              "reward": 9.294057941567013,
+              "crashed": true,
+              "min_distance": null,
+              "length": 13,
+              "mean_speed": 22.984418495291568
+            },
+            {
+              "reward": 22.07533476888302,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.999976566505428
+            },
+            {
+              "reward": 21.03036309340432,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.005727448604727
+            },
+            {
+              "reward": 21.839592551984314,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.534351668408476
+            },
+            {
+              "reward": 12.902892336379235,
+              "crashed": true,
+              "min_distance": null,
+              "length": 19,
+              "mean_speed": 21.44445348780856
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.154568316520134,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.034351668408476
+            },
+            {
+              "reward": 20.689116131048554,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741812
+            },
+            {
+              "reward": 20.94720218858199,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.867685001617758
+            },
+            {
+              "reward": 21.129625544070997,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.80015625845308
+            },
+            {
+              "reward": 22.630406050714654,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 23.034346658663495
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 6.556433936141696,
+              "crashed": true,
+              "min_distance": null,
+              "length": 8,
+              "mean_speed": 26.509770693154614
+            },
+            {
+              "reward": 6.005676019306135,
+              "crashed": true,
+              "min_distance": null,
+              "length": 8,
+              "mean_speed": 24.924472542196284
+            },
+            {
+              "reward": 21.845580396323925,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.034351522942895
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.913162961324833,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.86768500163844
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 6.957162086763046,
+              "crashed": true,
+              "min_distance": null,
+              "length": 8,
+              "mean_speed": 28.280543250536326
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.769504780062274,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.534351668408476
+            },
+            {
+              "reward": 21.5284090909091,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.534351668408476
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.758128400761976,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.00017142899236
+            },
+            {
+              "reward": 11.061240535844066,
+              "crashed": true,
+              "min_distance": null,
+              "length": 15,
+              "mean_speed": 23.416199483545412
+            },
+            {
+              "reward": 20.690946261312185,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741812
+            },
+            {
+              "reward": 20.886215939385888,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701018335075144
+            },
+            {
+              "reward": 21.720120002057858,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.833333358316363
+            },
+            {
+              "reward": 21.289772727272737,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.201018335075144
+            },
+            {
+              "reward": 22.67834946481722,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.966651496107325
+            },
+            {
+              "reward": 22.30996055228545,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.3676850017418
+            },
+            {
+              "reward": 24.193147038113217,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 24.36768500172049
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.573863636363644,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.976176818225323,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.86768085091357
+            },
+            {
+              "reward": 21.561382033743605,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.36768500174181
+            },
+            {
+              "reward": 21.28179385833812,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.034351668408483
+            },
+            {
+              "reward": 4.0056818181818175,
+              "crashed": true,
+              "min_distance": null,
+              "length": 6,
+              "mean_speed": 23.07267183894054
+            },
+            {
+              "reward": 21.00332613469856,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701018335075148
+            },
+            {
+              "reward": 10.65695694532064,
+              "crashed": true,
+              "min_distance": null,
+              "length": 14,
+              "mean_speed": 24.67314567216523
+            },
+            {
+              "reward": 20.53986131210654,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.17253696263746
+            },
+            {
+              "reward": 22.16277473050795,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.03435166840848
+            },
+            {
+              "reward": 12.065393486651738,
+              "crashed": true,
+              "min_distance": null,
+              "length": 17,
+              "mean_speed": 22.359017680773213
+            },
+            {
+              "reward": 21.39926218149697,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.160997094910325
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            }
+          ]
+        },
+        "1": {
+          "summary": {
+            "collision_rate": 0.16,
+            "mean_crashes": 0.16,
+            "safety_margin": null,
+            "mean_speed": 21.122882265375207,
+            "reward_mean": 19.374869303095185,
+            "reward_std": 4.474108990427937,
+            "reward_min": 1.7953289908768333,
+            "reward_max": 23.429525885323105,
+            "reward_median": 20.454545454545464
+          },
+          "episodes": [
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 23.429525885323105,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 23.367685001741197
+            },
+            {
+              "reward": 21.288762219281946,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.034351668408473
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.59977608395313,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.327497338769202
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 22.790439486595268,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.53435166840848
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 1.7953289908768333,
+              "crashed": true,
+              "min_distance": null,
+              "length": 3,
+              "mean_speed": 22.825941266044236
+            },
+            {
+              "reward": 20.626066852698383,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.36768500174181
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.76961121060948,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.867685001741798
+            },
+            {
+              "reward": 20.924010110162946,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701018335075144
+            },
+            {
+              "reward": 16.544795056657748,
+              "crashed": true,
+              "min_distance": null,
+              "length": 23,
+              "mean_speed": 22.2279716577904
+            },
+            {
+              "reward": 6.578465542539556,
+              "crashed": true,
+              "min_distance": null,
+              "length": 9,
+              "mean_speed": 24.817996840373905
+            },
+            {
+              "reward": 21.000634722444342,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.03435152637926
+            },
+            {
+              "reward": 16.399724783011788,
+              "crashed": true,
+              "min_distance": null,
+              "length": 23,
+              "mean_speed": 22.373634117669127
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 22.084012388268214,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.333333479528488
+            },
+            {
+              "reward": 20.96474536340198,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701018334933426
+            },
+            {
+              "reward": 22.35021792718821,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.36768500161724
+            },
+            {
+              "reward": 20.88493086550017,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.69515304530961
+            },
+            {
+              "reward": 16.106552217746987,
+              "crashed": true,
+              "min_distance": null,
+              "length": 22,
+              "mean_speed": 22.907819821496055
+            },
+            {
+              "reward": 14.75447880002151,
+              "crashed": true,
+              "min_distance": null,
+              "length": 22,
+              "mean_speed": 20.80482221753631
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.539880180614126,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.19615120361954
+            },
+            {
+              "reward": 21.322727568870917,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.200823472567535
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.573863636363644,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 22.91345024484417,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.701018335075148
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 22.919221382516803,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 23.29998482944004
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 4.794487515983009,
+              "crashed": true,
+              "min_distance": null,
+              "length": 7,
+              "mean_speed": 22.98914155159014
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 22.032444761621242,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.034351668408366
+            },
+            {
+              "reward": 21.285707040139464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.201018335075144
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.23266809117035,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.201018331511175
+            },
+            {
+              "reward": 8.295238788737331,
+              "crashed": true,
+              "min_distance": null,
+              "length": 11,
+              "mean_speed": 24.407182510181244
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.571645133062454,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 20.81061457320827,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.70101833507461
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.571645133062454,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 20.805974416465087,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701018335075144
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            }
+          ]
+        },
+        "3": {
+          "summary": {
+            "collision_rate": 0.28,
+            "mean_crashes": 0.28,
+            "safety_margin": null,
+            "mean_speed": 21.800759230791993,
+            "reward_mean": 16.94455124761246,
+            "reward_std": 6.468226322143497,
+            "reward_min": 1.9602091714909529,
+            "reward_max": 23.02546770714389,
+            "reward_median": 20.454545454545464
+          },
+          "episodes": [
+            {
+              "reward": 8.863744663309284,
+              "crashed": true,
+              "min_distance": null,
+              "length": 13,
+              "mean_speed": 22.20509850257691
+            },
+            {
+              "reward": 21.51534816968769,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.367685001741812
+            },
+            {
+              "reward": 21.050107754285925,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.839203628474813
+            },
+            {
+              "reward": 20.571645133062454,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 21.526173447956246,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.534351668408476
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 12.303936259811957,
+              "crashed": true,
+              "min_distance": null,
+              "length": 16,
+              "mean_speed": 24.450716525302077
+            },
+            {
+              "reward": 1.9602091714909529,
+              "crashed": true,
+              "min_distance": null,
+              "length": 3,
+              "mean_speed": 24.574128591678228
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.76465626456725,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.465682632998178
+            },
+            {
+              "reward": 2.403409090909091,
+              "crashed": true,
+              "min_distance": null,
+              "length": 4,
+              "mean_speed": 21.676068980660084
+            },
+            {
+              "reward": 20.886238081785933,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.53435166840848
+            },
+            {
+              "reward": 20.66278704898738,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741812
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.76948538750476,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.534351668408473
+            },
+            {
+              "reward": 21.289772727272737,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.201018335075144
+            },
+            {
+              "reward": 21.492206044398085,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.33917350785348
+            },
+            {
+              "reward": 20.54087259229282,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 7.957161939125285,
+              "crashed": true,
+              "min_distance": null,
+              "length": 9,
+              "mean_speed": 28.471594091376005
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 23.02546770714389,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 23.03432222703385
+            },
+            {
+              "reward": 5.95717232116616,
+              "crashed": true,
+              "min_distance": null,
+              "length": 7,
+              "mean_speed": 27.803941496059963
+            },
+            {
+              "reward": 21.713492279508976,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.534351668408483
+            },
+            {
+              "reward": 9.410501789415013,
+              "crashed": true,
+              "min_distance": null,
+              "length": 13,
+              "mean_speed": 23.22847918120391
+            },
+            {
+              "reward": 5.816596630269247,
+              "crashed": true,
+              "min_distance": null,
+              "length": 9,
+              "mean_speed": 21.02311607633239
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.539880180635205,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075137
+            },
+            {
+              "reward": 4.090909090909091,
+              "crashed": true,
+              "min_distance": null,
+              "length": 7,
+              "mean_speed": 18.377624910285565
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.64172132729937,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.36768500174181
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.929582538866992,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701018335075144
+            },
+            {
+              "reward": 20.690946261312185,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741812
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.73654977864018,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.53435166839081
+            },
+            {
+              "reward": 6.120532417120757,
+              "crashed": true,
+              "min_distance": null,
+              "length": 7,
+              "mean_speed": 29.3003979265452
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 11.123406153237509,
+              "crashed": true,
+              "min_distance": null,
+              "length": 12,
+              "mean_speed": 29.59189860678336
+            },
+            {
+              "reward": 20.571645133062454,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 6.585641768522437,
+              "crashed": true,
+              "min_distance": null,
+              "length": 8,
+              "mean_speed": 27.716806595198165
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 5.855249827692322,
+              "crashed": true,
+              "min_distance": null,
+              "length": 7,
+              "mean_speed": 28.33722387089487
+            },
+            {
+              "reward": 21.289772727272737,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.201018335075144
+            },
+            {
+              "reward": 20.693181818181827,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741812
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 8.059377035736837,
+              "crashed": true,
+              "min_distance": null,
+              "length": 11,
+              "mean_speed": 23.66989746595559
+            }
+          ]
+        }
+      },
+      "overall": {
+        "collision_rate": 0.21333333333333335,
+        "mean_crashes": 0.21333333333333335,
+        "safety_margin": null,
+        "mean_speed": 21.509772079860014,
+        "reward_mean": 18.358438910378307,
+        "reward_std": 5.4990886117885545,
+        "reward_min": 1.7953289908768333,
+        "reward_max": 24.193147038113217,
+        "reward_median": 20.454545454545464
+      }
+    },
+    "conservative": {
+      "per_seed": {
+        "0": {
+          "summary": {
+            "collision_rate": 0.2,
+            "mean_crashes": 0.2,
+            "safety_margin": null,
+            "mean_speed": 21.512746030619546,
+            "reward_mean": 18.799713644543232,
+            "reward_std": 5.48778202143228,
+            "reward_min": 3.204545454545454,
+            "reward_max": 23.46923904335433,
+            "reward_median": 20.81138222156519
+          },
+          "episodes": [
+            {
+              "reward": 9.613636363636362,
+              "crashed": true,
+              "min_distance": null,
+              "length": 13,
+              "mean_speed": 24.184288272003563
+            },
+            {
+              "reward": 21.287537084319883,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.201018335075144
+            },
+            {
+              "reward": 20.571645133062454,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 22.038636659928027,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.201018168895835
+            },
+            {
+              "reward": 20.690946261312185,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741812
+            },
+            {
+              "reward": 20.571645133062454,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 10.821627993410788,
+              "crashed": true,
+              "min_distance": null,
+              "length": 16,
+              "mean_speed": 21.003924160315428
+            },
+            {
+              "reward": 21.249981898763686,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.167669831181847
+            },
+            {
+              "reward": 23.46923904335433,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 23.867685000891704
+            },
+            {
+              "reward": 23.275969076412185,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 23.53435166840482
+            },
+            {
+              "reward": 20.80500117567249,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.53435166840848
+            },
+            {
+              "reward": 20.80801823029591,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.53435166840848
+            },
+            {
+              "reward": 22.08878090168231,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.339203629304116
+            },
+            {
+              "reward": 6.404227562754552,
+              "crashed": true,
+              "min_distance": null,
+              "length": 9,
+              "mean_speed": 24.641975308641975
+            },
+            {
+              "reward": 20.81250000000001,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.53435166840848
+            },
+            {
+              "reward": 17.198863636363637,
+              "crashed": true,
+              "min_distance": null,
+              "length": 25,
+              "mean_speed": 21.042511462294982
+            },
+            {
+              "reward": 23.216197281842632,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 24.00486713147639
+            },
+            {
+              "reward": 4.003446175228971,
+              "crashed": true,
+              "min_distance": null,
+              "length": 6,
+              "mean_speed": 23.784356652949246
+            },
+            {
+              "reward": 20.571645133062454,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 21.168236042153367,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.034351668408476
+            },
+            {
+              "reward": 22.39640578125834,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.201018335075144
+            },
+            {
+              "reward": 20.573863636363644,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 8.011363636363635,
+              "crashed": true,
+              "min_distance": null,
+              "length": 11,
+              "mean_speed": 23.592364528800672
+            },
+            {
+              "reward": 20.693181818181827,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741812
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 18.517220973433364,
+              "crashed": true,
+              "min_distance": null,
+              "length": 26,
+              "mean_speed": 21.963953329171655
+            },
+            {
+              "reward": 21.647727272727284,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.701018335075144
+            },
+            {
+              "reward": 21.248762201775406,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.16666681286182
+            },
+            {
+              "reward": 21.521439714991086,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.201018335075144
+            },
+            {
+              "reward": 3.204545454545454,
+              "crashed": true,
+              "min_distance": null,
+              "length": 5,
+              "mean_speed": 22.879149507209267
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.170454545454554,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.034351668408476
+            },
+            {
+              "reward": 20.81250000000001,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.53435166840848
+            },
+            {
+              "reward": 21.1682189025017,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.034351668408476
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.5284090909091,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.534351668408476
+            },
+            {
+              "reward": 7.210227272727271,
+              "crashed": true,
+              "min_distance": null,
+              "length": 10,
+              "mean_speed": 24.397086419753087
+            },
+            {
+              "reward": 22.084031335836052,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.867685001741812
+            },
+            {
+              "reward": 20.81250000000001,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.53435166840848
+            },
+            {
+              "reward": 21.647727272727284,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.701018335075144
+            },
+            {
+              "reward": 20.573863636363644,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 20.93181818181819,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701018335075144
+            },
+            {
+              "reward": 21.442063851925422,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.201018335075144
+            },
+            {
+              "reward": 20.810264443130368,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.53435166840848
+            },
+            {
+              "reward": 4.0056818181818175,
+              "crashed": true,
+              "min_distance": null,
+              "length": 6,
+              "mean_speed": 23.232624589341057
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.49881241780931,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.36768500174181
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.647727272727284,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.701018335075144
+            },
+            {
+              "reward": 21.886363636363647,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.034351668408476
+            }
+          ]
+        },
+        "1": {
+          "summary": {
+            "collision_rate": 0.16,
+            "mean_crashes": 0.16,
+            "safety_margin": null,
+            "mean_speed": 21.636229681733912,
+            "reward_mean": 18.96923422876795,
+            "reward_std": 5.731210816077879,
+            "reward_min": 1.602272727272727,
+            "reward_max": 24.13548929448634,
+            "reward_median": 20.929582538866992
+          },
+          "episodes": [
+            {
+              "reward": 21.36351080905866,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.201018335075144
+            },
+            {
+              "reward": 3.2023098115942545,
+              "crashed": true,
+              "min_distance": null,
+              "length": 5,
+              "mean_speed": 22.340855184528067
+            },
+            {
+              "reward": 20.571645133062454,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 11.213673447956234,
+              "crashed": true,
+              "min_distance": null,
+              "length": 15,
+              "mean_speed": 24.229068735576217
+            },
+            {
+              "reward": 21.76218210820911,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.867685001741812
+            },
+            {
+              "reward": 20.929582538866992,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701018335075144
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 4.003446175613618,
+              "crashed": true,
+              "min_distance": null,
+              "length": 6,
+              "mean_speed": 23.587621764974852
+            },
+            {
+              "reward": 22.005681818181827,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.20101833507514
+            },
+            {
+              "reward": 21.051136363636374,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.86768500174181
+            },
+            {
+              "reward": 20.690963314880637,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741812
+            },
+            {
+              "reward": 21.89812466045383,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.034351668407773
+            },
+            {
+              "reward": 20.81250000000001,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.53435166840848
+            },
+            {
+              "reward": 6.360606690571531,
+              "crashed": true,
+              "min_distance": null,
+              "length": 8,
+              "mean_speed": 26.12718707937607
+            },
+            {
+              "reward": 22.757912910695,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 23.16666664668251
+            },
+            {
+              "reward": 4.802737665826652,
+              "crashed": true,
+              "min_distance": null,
+              "length": 7,
+              "mean_speed": 23.95801998824221
+            },
+            {
+              "reward": 22.1174813844687,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.36768500174179
+            },
+            {
+              "reward": 20.693181818181827,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741812
+            },
+            {
+              "reward": 20.81026435743181,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.53435166840848
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.93181818181819,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701018335075144
+            },
+            {
+              "reward": 20.929582538866992,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701018335075144
+            },
+            {
+              "reward": 22.60003708432154,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 23.034351668387167
+            },
+            {
+              "reward": 15.976876873197739,
+              "crashed": true,
+              "min_distance": null,
+              "length": 21,
+              "mean_speed": 23.867022986259663
+            },
+            {
+              "reward": 5.605718902501691,
+              "crashed": true,
+              "min_distance": null,
+              "length": 8,
+              "mean_speed": 23.803001902149063
+            },
+            {
+              "reward": 22.24208253886534,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.53435166840837
+            },
+            {
+              "reward": 21.59991704378947,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.534351668408476
+            },
+            {
+              "reward": 21.886363636363647,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.034351668408476
+            },
+            {
+              "reward": 21.52354574500847,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.534351668408476
+            },
+            {
+              "reward": 20.571645133062454,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 21.704073133451352,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.701018335075144
+            },
+            {
+              "reward": 22.75794547018688,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.701018335075148
+            },
+            {
+              "reward": 20.571645133062454,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 20.929582538866992,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701018335075144
+            },
+            {
+              "reward": 20.81250000000001,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.53435166840848
+            },
+            {
+              "reward": 24.13548929448634,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 24.367685001599487
+            },
+            {
+              "reward": 22.515892451556816,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.867684996888904
+            },
+            {
+              "reward": 21.409090909090917,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.36768500174181
+            },
+            {
+              "reward": 21.048900720683527,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.86768500174181
+            },
+            {
+              "reward": 21.75996360490777,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.867685001741812
+            },
+            {
+              "reward": 21.289772727272737,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.201018335075144
+            },
+            {
+              "reward": 21.526173447956253,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.534351668408476
+            },
+            {
+              "reward": 21.170454545454554,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.034351668408476
+            },
+            {
+              "reward": 20.573863636363644,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 20.573863636363644,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.89297150220842,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.70101833507514
+            },
+            {
+              "reward": 1.602272727272727,
+              "crashed": true,
+              "min_distance": null,
+              "length": 3,
+              "mean_speed": 22.990288065843618
+            }
+          ]
+        },
+        "3": {
+          "summary": {
+            "collision_rate": 0.3,
+            "mean_crashes": 0.3,
+            "safety_margin": null,
+            "mean_speed": 21.609489052292005,
+            "reward_mean": 16.405393708613342,
+            "reward_std": 7.145906040769728,
+            "reward_min": 1.4829545454545454,
+            "reward_max": 22.35916508567001,
+            "reward_median": 20.573863636363644
+          },
+          "episodes": [
+            {
+              "reward": 1.602272727272727,
+              "crashed": true,
+              "min_distance": null,
+              "length": 3,
+              "mean_speed": 21.46524917868211
+            },
+            {
+              "reward": 21.71830284064471,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.53435166840848
+            },
+            {
+              "reward": 20.93181818181819,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701018335075144
+            },
+            {
+              "reward": 21.289772727272737,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.201018335075144
+            },
+            {
+              "reward": 20.693181818181827,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741812
+            },
+            {
+              "reward": 21.533981685701626,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.504730003849218
+            },
+            {
+              "reward": 20.573863636363644,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 20.690946261312185,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741812
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 22.35916508567001,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.701018335074522
+            },
+            {
+              "reward": 4.55663250881008,
+              "crashed": true,
+              "min_distance": null,
+              "length": 6,
+              "mean_speed": 25.345954049058488
+            },
+            {
+              "reward": 20.81250000000001,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.53435166840848
+            },
+            {
+              "reward": 20.929582538866992,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701018335075144
+            },
+            {
+              "reward": 20.573863636363644,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 21.764826951244277,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.867685001741812
+            },
+            {
+              "reward": 22.12500000000001,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.36768500174179
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.693181818181827,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741812
+            },
+            {
+              "reward": 20.573863636363644,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 2.4564393939393936,
+              "crashed": true,
+              "min_distance": null,
+              "length": 4,
+              "mean_speed": 24.583333333333332
+            },
+            {
+              "reward": 5.730405322740767,
+              "crashed": true,
+              "min_distance": null,
+              "length": 8,
+              "mean_speed": 25.02391399249459
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 7.251951756901372,
+              "crashed": true,
+              "min_distance": null,
+              "length": 9,
+              "mean_speed": 27.04006626538042
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 2.3974713947814035,
+              "crashed": true,
+              "min_distance": null,
+              "length": 4,
+              "mean_speed": 21.885073907850092
+            },
+            {
+              "reward": 20.81250000000001,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.53435166840848
+            },
+            {
+              "reward": 11.211435947152049,
+              "crashed": true,
+              "min_distance": null,
+              "length": 15,
+              "mean_speed": 24.061599390742064
+            },
+            {
+              "reward": 1.4829545454545454,
+              "crashed": true,
+              "min_distance": null,
+              "length": 3,
+              "mean_speed": 20.068569337152905
+            },
+            {
+              "reward": 20.693181818181827,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741812
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 3.204545454545454,
+              "crashed": true,
+              "min_distance": null,
+              "length": 5,
+              "mean_speed": 21.90320196336149
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 8.011363636363635,
+              "crashed": true,
+              "min_distance": null,
+              "length": 11,
+              "mean_speed": 24.129455928835682
+            },
+            {
+              "reward": 20.81250000000001,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.53435166840848
+            },
+            {
+              "reward": 22.244318181818194,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.53435166840837
+            },
+            {
+              "reward": 6.051136363636362,
+              "crashed": true,
+              "min_distance": null,
+              "length": 9,
+              "mean_speed": 21.576669717760137
+            },
+            {
+              "reward": 8.257549286506372,
+              "crashed": true,
+              "min_distance": null,
+              "length": 10,
+              "mean_speed": 27.333266777501734
+            },
+            {
+              "reward": 20.573863636363644,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 21.1682189025017,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.034351668408476
+            },
+            {
+              "reward": 8.202184257014887,
+              "crashed": true,
+              "min_distance": null,
+              "length": 11,
+              "mean_speed": 24.055426373824968
+            },
+            {
+              "reward": 7.653409090909089,
+              "crashed": true,
+              "min_distance": null,
+              "length": 11,
+              "mean_speed": 22.369508119731382
+            },
+            {
+              "reward": 20.81250000000001,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.53435166840848
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 8.812499999999998,
+              "crashed": true,
+              "min_distance": null,
+              "length": 12,
+              "mean_speed": 24.293810882487424
+            },
+            {
+              "reward": 20.693181818181827,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741812
+            },
+            {
+              "reward": 21.289772727272737,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.201018335075144
+            },
+            {
+              "reward": 22.12500000000001,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.36768500174179
+            },
+            {
+              "reward": 20.807636751424518,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.53435166840848
+            }
+          ]
+        }
+      },
+      "overall": {
+        "collision_rate": 0.22,
+        "mean_crashes": 0.22,
+        "safety_margin": null,
+        "mean_speed": 21.586154921548488,
+        "reward_mean": 18.05811386064151,
+        "reward_std": 6.275298041851895,
+        "reward_min": 1.4829545454545454,
+        "reward_max": 24.13548929448634,
+        "reward_median": 20.749091496927157
+      }
+    },
+    "moderate": {
+      "per_seed": {
+        "0": {
+          "summary": {
+            "collision_rate": 0.08,
+            "mean_crashes": 0.08,
+            "safety_margin": null,
+            "mean_speed": 21.07587529810233,
+            "reward_mean": 20.375814188787558,
+            "reward_std": 2.9892788217744233,
+            "reward_min": 3.9578715892440046,
+            "reward_max": 22.87761658891517,
+            "reward_median": 20.987463874304304
+          },
+          "episodes": [
+            {
+              "reward": 21.134382149238334,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.034351668408476
+            },
+            {
+              "reward": 15.589694033031886,
+              "crashed": true,
+              "min_distance": null,
+              "length": 22,
+              "mean_speed": 22.16092252864042
+            },
+            {
+              "reward": 21.103201335126027,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.201018210216905
+            },
+            {
+              "reward": 21.167236409190426,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.03321137628691
+            },
+            {
+              "reward": 20.660190774111,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741812
+            },
+            {
+              "reward": 21.487421334549186,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.53334850462287
+            },
+            {
+              "reward": 21.894561100882818,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.20001602606145
+            },
+            {
+              "reward": 21.91397004806182,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.700984038667375
+            },
+            {
+              "reward": 20.653396788524315,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741812
+            },
+            {
+              "reward": 22.87761658891517,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.700186599573
+            },
+            {
+              "reward": 22.640811299791736,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.700989039749196
+            },
+            {
+              "reward": 20.80500117567249,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.53435166840848
+            },
+            {
+              "reward": 20.66016751750167,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741812
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.946197742020274,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.201018334467218
+            },
+            {
+              "reward": 20.768222379545357,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.53435166426385
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.659175549548902,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741794
+            },
+            {
+              "reward": 20.571645133062454,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 21.05372233394882,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.033377778380352
+            },
+            {
+              "reward": 20.659175595398594,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.36768498102808
+            },
+            {
+              "reward": 20.625219859226945,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.33920362930412
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.37389341521384,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.171368230816068
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.051772855519186,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.03432723392606
+            },
+            {
+              "reward": 20.571645133062454,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 3.9578715892440046,
+              "crashed": true,
+              "min_distance": null,
+              "length": 6,
+              "mean_speed": 21.964868208594435
+            },
+            {
+              "reward": 22.84214663612893,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 23.200989729067807
+            },
+            {
+              "reward": 21.88540717475476,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.166690270716337
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.523545744572747,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.534351668408476
+            },
+            {
+              "reward": 21.170454545454554,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.034351668408476
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.08187270193337,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.86768497334372
+            },
+            {
+              "reward": 21.56696594276311,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.49999931567661
+            },
+            {
+              "reward": 20.964773023416377,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701017362630754
+            },
+            {
+              "reward": 21.647727272727284,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.701018335075144
+            },
+            {
+              "reward": 20.651176268022695,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.36768500174179
+            },
+            {
+              "reward": 15.62398966065187,
+              "crashed": true,
+              "min_distance": null,
+              "length": 21,
+              "mean_speed": 23.78074983591713
+            },
+            {
+              "reward": 20.540049772093923,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 20.573863636363644,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 21.01015472519223,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.86768500174181
+            },
+            {
+              "reward": 11.105721751448879,
+              "crashed": true,
+              "min_distance": null,
+              "length": 17,
+              "mean_speed": 20.30561549623525
+            },
+            {
+              "reward": 20.653424923405524,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.36768500174181
+            },
+            {
+              "reward": 21.640598654619588,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.701018335075144
+            },
+            {
+              "reward": 22.079168489439237,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.367679995536562
+            },
+            {
+              "reward": 21.33529455781955,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.334336497848508
+            },
+            {
+              "reward": 21.170454545454554,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.034351668408476
+            },
+            {
+              "reward": 21.170454545454554,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.034351668408476
+            }
+          ]
+        },
+        "1": {
+          "summary": {
+            "collision_rate": 0.1,
+            "mean_crashes": 0.1,
+            "safety_margin": null,
+            "mean_speed": 20.89787671672941,
+            "reward_mean": 19.462187814336698,
+            "reward_std": 4.808755589080766,
+            "reward_min": 1.5982070401394535,
+            "reward_max": 23.150871694216505,
+            "reward_median": 20.816068367528615
+          },
+          "episodes": [
+            {
+              "reward": 21.051136363636374,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.86768500174181
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.693181818181827,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741812
+            },
+            {
+              "reward": 20.971766427978828,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701018335075148
+            },
+            {
+              "reward": 21.515390056467147,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.70018659957248
+            },
+            {
+              "reward": 21.79990220433537,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.86768402515278
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.00332613469856,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701018335075148
+            },
+            {
+              "reward": 20.573863636363644,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 20.75532501382114,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.534351668408476
+            },
+            {
+              "reward": 21.373030865247145,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.36768500174181
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 15.09885637611964,
+              "crashed": true,
+              "min_distance": null,
+              "length": 20,
+              "mean_speed": 23.87701478158084
+            },
+            {
+              "reward": 21.209030057210448,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.1666959611598
+            },
+            {
+              "reward": 8.567588262475816,
+              "crashed": true,
+              "min_distance": null,
+              "length": 12,
+              "mean_speed": 23.129493225833244
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.41946834358772,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.53435166839021
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 23.150871694216505,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 23.194144899572834
+            },
+            {
+              "reward": 20.93181818181819,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701018335075144
+            },
+            {
+              "reward": 21.25576645861874,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.172536962637455
+            },
+            {
+              "reward": 20.73873148444818,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.534351647691214
+            },
+            {
+              "reward": 20.863852486080187,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701018334470156
+            },
+            {
+              "reward": 21.436527139283836,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.533494910326088
+            },
+            {
+              "reward": 21.6811971537194,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.465824766809813
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.188514669295692,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.367538592474038
+            },
+            {
+              "reward": 20.744363497021176,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.500861030703547
+            },
+            {
+              "reward": 20.6592273436209,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.36768500174181
+            },
+            {
+              "reward": 1.5982070401394535,
+              "crashed": true,
+              "min_distance": null,
+              "length": 3,
+              "mean_speed": 21.808005072397503
+            },
+            {
+              "reward": 21.409090909090917,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.36768500174181
+            },
+            {
+              "reward": 20.890871318369683,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701018335075144
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.659367953912103,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741812
+            },
+            {
+              "reward": 21.13114251718684,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.200043635121787
+            },
+            {
+              "reward": 21.048917860335184,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.86768500174181
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.889812631634378,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.70004446576137
+            },
+            {
+              "reward": 21.36810909623479,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.36668198342178
+            },
+            {
+              "reward": 21.05693736144338,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.86768500174181
+            },
+            {
+              "reward": 20.903605897077316,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.639188458744155
+            },
+            {
+              "reward": 20.768284248977047,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.528652801450733
+            },
+            {
+              "reward": 20.651183242694003,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.36768500174181
+            },
+            {
+              "reward": 21.238448789614246,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.166667522168247
+            },
+            {
+              "reward": 21.12963032774841,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.80015625845308
+            },
+            {
+              "reward": 1.6000542239715385,
+              "crashed": true,
+              "min_distance": null,
+              "length": 3,
+              "mean_speed": 20.84676521046679
+            },
+            {
+              "reward": 3.0829916301590727,
+              "crashed": true,
+              "min_distance": null,
+              "length": 5,
+              "mean_speed": 21.36595631015681
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            }
+          ]
+        },
+        "3": {
+          "summary": {
+            "collision_rate": 0.26,
+            "mean_crashes": 0.26,
+            "safety_margin": null,
+            "mean_speed": 21.333433555690185,
+            "reward_mean": 18.771729531719004,
+            "reward_std": 4.978479255034478,
+            "reward_min": 2.4564393939393936,
+            "reward_max": 22.67423531598212,
+            "reward_median": 20.816864031165775
+          },
+          "episodes": [
+            {
+              "reward": 20.74712954628433,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.53435166840537
+            },
+            {
+              "reward": 21.307983012845956,
+              "crashed": true,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.082413201884414
+            },
+            {
+              "reward": 20.626014545268777,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001738778
+            },
+            {
+              "reward": 21.289772727272737,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.201018335075144
+            },
+            {
+              "reward": 21.884127993410793,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.034351668408476
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.154025895287358,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.034351668408476
+            },
+            {
+              "reward": 14.567497981459896,
+              "crashed": true,
+              "min_distance": null,
+              "length": 19,
+              "mean_speed": 24.12819892239836
+            },
+            {
+              "reward": 22.67423531598212,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 23.166666666666668
+            },
+            {
+              "reward": 19.0601397888206,
+              "crashed": true,
+              "min_distance": null,
+              "length": 24,
+              "mean_speed": 24.91725890159057
+            },
+            {
+              "reward": 21.01134556406611,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.867685001741805
+            },
+            {
+              "reward": 10.46590909090909,
+              "crashed": true,
+              "min_distance": null,
+              "length": 16,
+              "mean_speed": 20.111210929950012
+            },
+            {
+              "reward": 20.571645133062454,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.201018335075148
+            },
+            {
+              "reward": 20.65697985913112,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367684880529687
+            },
+            {
+              "reward": 21.36402900804168,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.33333418883491
+            },
+            {
+              "reward": 21.320515553118803,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.034351668408476
+            },
+            {
+              "reward": 6.852272727272726,
+              "crashed": true,
+              "min_distance": null,
+              "length": 10,
+              "mean_speed": 22.10645893170452
+            },
+            {
+              "reward": 17.33394694290069,
+              "crashed": true,
+              "min_distance": null,
+              "length": 24,
+              "mean_speed": 22.555381439825638
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.248762201775406,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.16666681286182
+            },
+            {
+              "reward": 2.4564393939393936,
+              "crashed": true,
+              "min_distance": null,
+              "length": 4,
+              "mean_speed": 24.583333333333332
+            },
+            {
+              "reward": 21.24655535754697,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.200989044143046
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 12.539353784792254,
+              "crashed": true,
+              "min_distance": null,
+              "length": 19,
+              "mean_speed": 20.772513991848708
+            },
+            {
+              "reward": 20.89559908350047,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.67253696263746
+            },
+            {
+              "reward": 11.215909090909088,
+              "crashed": true,
+              "min_distance": null,
+              "length": 15,
+              "mean_speed": 24.169353042093356
+            },
+            {
+              "reward": 20.60197561561395,
+              "crashed": true,
+              "min_distance": null,
+              "length": 29,
+              "mean_speed": 21.949166375269527
+            },
+            {
+              "reward": 4.090909090909091,
+              "crashed": true,
+              "min_distance": null,
+              "length": 7,
+              "mean_speed": 18.377624910285565
+            },
+            {
+              "reward": 20.93181818181819,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701018335075144
+            },
+            {
+              "reward": 20.539880180614126,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.17253696263746
+            },
+            {
+              "reward": 21.244710812856866,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.201018335075137
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 22.32335240878861,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.339203629304123
+            },
+            {
+              "reward": 21.51664373322737,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.46679790610344
+            },
+            {
+              "reward": 5.719754111741415,
+              "crashed": true,
+              "min_distance": null,
+              "length": 8,
+              "mean_speed": 25.0
+            },
+            {
+              "reward": 21.271879749748,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.362817870286207
+            },
+            {
+              "reward": 20.693181818181827,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.367685001741812
+            },
+            {
+              "reward": 21.22662164790131,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.201018335075144
+            },
+            {
+              "reward": 12.254889105400725,
+              "crashed": true,
+              "min_distance": null,
+              "length": 18,
+              "mean_speed": 21.632730358092612
+            },
+            {
+              "reward": 20.454545454545464,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.03435166840848
+            },
+            {
+              "reward": 21.36810329735911,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.36765570666508
+            },
+            {
+              "reward": 21.051136363636374,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.86768500174181
+            },
+            {
+              "reward": 21.71899094585227,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.86751357275008
+            },
+            {
+              "reward": 21.8726997133559,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 22.005670573453074
+            },
+            {
+              "reward": 21.134235446753834,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.005870295970787
+            },
+            {
+              "reward": 21.051136363636374,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.86768500174181
+            },
+            {
+              "reward": 20.631167842277684,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.36768500174181
+            },
+            {
+              "reward": 20.88659851604722,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 20.701018335075123
+            },
+            {
+              "reward": 21.23932931535834,
+              "crashed": false,
+              "min_distance": null,
+              "length": 30,
+              "mean_speed": 21.03435166840848
+            }
+          ]
+        }
+      },
+      "overall": {
+        "collision_rate": 0.14666666666666667,
+        "mean_crashes": 0.14666666666666667,
+        "safety_margin": null,
+        "mean_speed": 21.102395190173976,
+        "reward_mean": 19.536577178281085,
+        "reward_std": 4.4022728350386116,
+        "reward_min": 1.5982070401394535,
+        "reward_max": 23.150871694216505,
+        "reward_median": 20.875225501063703
+      }
+    }
+  }
+}
