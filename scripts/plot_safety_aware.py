@@ -14,6 +14,9 @@ Usage :
     python scripts/plot_safety_aware.py --eval-json comparison_results/safety_aware_eval_20240101_120000.json
 """
 
+import matplotlib
+matplotlib.use("Agg")
+
 import argparse
 import json
 import os
@@ -71,7 +74,7 @@ def plot_training_curves(output_dir: str) -> None:
 
     for agent_name, metrics_path in METRICS_PATHS.items():
         if not Path(metrics_path).exists():
-            print(f"  ⚠️  metrics.json introuvable pour {agent_name} ({metrics_path}) — ignoré.")
+            print(f"  metrics.json introuvable pour {agent_name} ({metrics_path}) — ignoré.")
             continue
 
         with open(metrics_path) as f:
@@ -86,7 +89,7 @@ def plot_training_curves(output_dir: str) -> None:
         found_any = True
 
     if not found_any:
-        print("  ⚠️  Aucun metrics.json trouvé — training curves ignorées.")
+        print("  Aucun metrics.json trouvé — training curves ignorées.")
         plt.close()
         return
 
@@ -100,7 +103,7 @@ def plot_training_curves(output_dir: str) -> None:
     out_path = os.path.join(output_dir, "safety_aware_training_curves.png")
     plt.savefig(out_path, dpi=150)
     plt.close()
-    print(f"  ✅ Training curves → {out_path}")
+    print(f" Training curves → {out_path}")
 
 
 # ================ PLOT 2 : SCATTER REWARD vs COLLISION ================
@@ -133,7 +136,7 @@ def plot_reward_vs_collision(eval_data: dict, output_dir: str) -> None:
     out_path = os.path.join(output_dir, "safety_aware_reward_vs_collision.png")
     plt.savefig(out_path, dpi=150)
     plt.close()
-    print(f"  ✅ Scatter tradeoff → {out_path}")
+    print(f" Scatter tradeoff → {out_path}")
 
 
 # ================ PLOT 3 : BAR CHART COLLISION RATE ================
@@ -180,7 +183,7 @@ def plot_collision_rate_bar(eval_data: dict, output_dir: str) -> None:
     out_path = os.path.join(output_dir, "safety_aware_collision_rate_bar.png")
     plt.savefig(out_path, dpi=150)
     plt.close()
-    print(f"  ✅ Bar chart collision → {out_path}")
+    print(f" Bar chart collision → {out_path}")
 
 
 # ================ MAIN ================
@@ -203,7 +206,7 @@ def main():
     if eval_json_path is None:
         eval_data = load_latest_eval_json(args.output_dir)
         if eval_data is None:
-            print("\n  ⚠️  Aucun fichier safety_aware_eval_*.json trouvé dans "
+            print("\n   Aucun fichier safety_aware_eval_*.json trouvé dans "
                   f"{args.output_dir}.")
             print("  Lance d'abord evaluate_safety_aware.py puis relance ce script.")
             return
