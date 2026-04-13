@@ -215,4 +215,4 @@ agents gardent des limites de sécurité comparables, et nous avons bien remarqu
 "qualité visuelle" et "reward optimisée" .
 
 *L'analyse de l'extension safety-aware est développée dans
-`analysis/EXTENSION_RESULTS_SUMMARY.md`.*
+`analysis/EXTENSION_TASK_safety_aware.md`.*
