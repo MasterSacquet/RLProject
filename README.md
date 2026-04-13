@@ -4,7 +4,7 @@ Comparaison entre une implémentation personnalisée de DQN et la bibliothèque
 Stable Baselines3 sur l'environnement highway-v0, avec une extension orientée
 sécurité par reward shaping.
 
-Les analyses détaillées sont disponibles dans :
+Des résumés détaillés sont disponibles dans :
 - [`analysis/CORE_TASK_CustomDQN_vs_StableBaselines.md`](analysis/CORE_TASK_CustomDQN_vs_StableBaselines.md) pour le core task
 - [`analysis/EXTENSION_TASK_safety_aware.md`](analysis/EXTENSION_TASK_safety_aware.md) pour l'extension
 
