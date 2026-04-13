@@ -131,4 +131,20 @@ Les résultats invalident partiellement l'hypothèse initiale : le reward shapin
 
 ## 6. Analyse des résultats qualitatifs (rollouts)
 
-*L'analyse qualitative (comportements observés en rollout, failure modes spécifiques) est développée dans la section suivante.*
+# Analyse des résultats qualitatifs (rollouts) — Safety-Aware Agents
+
+### Analyses globales
+
+**Conservative (λ=10, μ=50) :** comportement globalement passif et peu cohérent. L'agent tend à rester dans sa voie sans interagir avec le trafic, parfois à vitesse très réduite. Quand un obstacle se présente, il ne tente pas de l'éviter — il subit la situation. En trafic dense, ce manque de réaction devient problématique : l'agent se retrouve piégé sans avoir développé de stratégie d'échappement. La forte pénalité semble avoir appris à l'agent à éviter le trafic par inaction plutôt qu'à le gérer.
+
+**Moderate (λ=5, μ=30) :** comportement plus lisible et plus intentionnel. L'agent ajuste sa vitesse face aux obstacles (ralentissement préventif) et effectue occasionnellement des changements de voie. Les décisions sont moins fluides que le baseline mais plus prudentes. Des collisions existent encore, généralement liées à un freinage tardif ou à une décision de dépassement avortée.
+
+**Point important :** le conservative illustre un effet pervers du reward shaping — une pénalité trop forte peut produire un agent qui évite les situations à risque en ne conduisant presque plus, plutôt qu'en conduisant mieux. Le moderate trouve un meilleur équilibre : le signal de sécurité est assez fort pour modifier le comportement, sans écraser la politique de conduite globale.
+
+### Exemples de failure modes
+
+**Conservative - seed 0 :** collision frontale avec un camion sans aucune tentative d'évitement. L'obstacle était visible bien en amont mais l'agent n'a pas réagi. Cause probable : politique déstabilisée par la pénalité excessive, l'agent n'a pas appris à anticiper mais seulement à réagir localement — et quand l'espace se ferme, il n'a plus de réponse.
+
+**Moderate - seed 1 :** collision en ligne droite malgré un ralentissement avant l'impact. Cause probable : freinage initié trop tard, sans changement de voie compensatoire. L'agent a détecté le danger mais n'a pas eu le temps d'y répondre efficacement.
+
+Ces deux failure modes traduisent des limites différentes : le conservative échoue par absence de stratégie, le moderate échoue par manque de réactivité. Le second est un échec de conduite classique ; le premier est un problème inhérent aux paramètres de l'entraînement.
