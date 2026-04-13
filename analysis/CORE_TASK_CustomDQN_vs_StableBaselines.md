@@ -1,17 +1,17 @@
 # Core Task: Custom DQN vs Stable Baselines3
 
 ## Table des matières
-- [1. Introduction](#1-introduction)
-- [2. Environnement et configuration](#2-environnement-et-configuration)
-- [3. Agents implémentés](#3-agents-implémentés)
-    - [3.1 DQN personnalisé](#31-dqn-personnalisé)
-    - [3.2 Stable Baselines3](#32-stable-baselines3)
-- [4. Protocole d'évaluation](#4-protocole-dévaluation)
-- [5. Résultats quantitatifs](#5-analyse-des-résultats-quantitatifs)
-- [6. Résultats qualitatifs](#6-analyse-des-résultats-qualitatifs-rollouts)
-    - [Analyses globales](#analyses-globales)
-    - [Exemples de failure case](#exemples-de-failure-modes)
-- [7. Conclusion sur les choix des designs et les résultats obtenus](#7-conclusion)
+1. [Introduction](#1-introduction)  
+2. [Environnement et configuration](#2-environnement-et-configuration)  
+3. [Agents implémentés](#3-agents-implémentés)   
+    * [3.1 DQN personnalisé](#31-dqn-personnalisé)  
+    * [3.2 Stable Baselines3](#32-stable-baselines3)  
+4. [Protocole d'évaluation](#4-protocole-dévaluation)
+5. [Résultats quantitatifs](#5-analyse-des-résultats-quantitatifs)  
+6. [Résultats qualitatifs](#6-analyse-des-résultats-qualitatifs-rollouts)  
+    * [Analyses globales](#analyses-globales)
+    * [Exemples de failure case](#exemples-de-failure-modes)
+7. [Conclusion sur les choix des designs et les résultats obtenus](#7-conclusion)  
 
 
 ## 1. Introduction
