@@ -1,242 +1,132 @@
-# Task Definition: RL Project - Juliette
-**Projet**: DQN vs Stable-Baselines Comparison + Safety-Aware Extension  
+# Task Definition — RL Project
 
----
+**Projet** : DQN vs Stable-Baselines Comparison + Safety-Aware Extension
 
-## PART 1: CORE TASK (Baseline Comparison)
 
-### 1.1 DQN Implementation
-- [x] **Custom DQN Agent Implemented** — FINI (Simon)
-  - Dueling DQN architecture
-  - Double DQN with target network
+## PART 1 : CORE TASK (Baseline Comparison)
+
+### 1.1 Implémentation du DQN custom
+- [x] **Agent DQN custom** — FINI (Simon)
+  - Architecture Dueling DQN + Double DQN avec target network
   - Replay buffer
-  - Location: [src/rlproject/dqn_agent.py](src/rlproject/dqn_agent.py)
-  - Status: FINI
+  - Fichier : [src/rlproject/dqn_agent.py](src/rlproject/dqn_agent.py)
 
-### 1.2 Training Infrastructure
-- [x] **Shared Configuration** — FINI (Simon)
-  - Environment: highway-v0
-  - Observation: Kinematics
-  - Actions: DiscreteMetaAction
-  - Config file: [src/rlproject/shared_core_config.py](src/rlproject/shared_core_config.py)
-  - Status: FINI
+### 1.2 Infrastructure d'entraînement
+- [x] **Configuration partagée** — FINI (Simon)
+  - Environnement : highway-v0, Observation : Kinematics, Actions : DiscreteMetaAction
+  - Fichier : [src/rlproject/shared_core_config.py](src/rlproject/shared_core_config.py)
 
-- [x] **Training Scripts** — FINI (Simon)
-  - Custom DQN training: [scripts/train_dqn_custom.py](scripts/train_dqn_custom.py)
-  - Stable-Baselines3 training: [scripts/train_stable_baselines.py](scripts/train_stable_baselines.py)
-  - Checkpoints saved in: `checkpoints_custom/` and `checkpoints_sb3/`
-  - Status: FINI
+- [x] **Scripts d'entraînement** — FINI (Simon)
+  - [scripts/train_dqn_custom.py](scripts/train_dqn_custom.py)
+  - [scripts/train_stable_baselines.py](scripts/train_stable_baselines.py)
+  - Checkpoints : `checkpoints_custom/` et `checkpoints_sb3/`
 
-### 1.3 Quantitative Evaluation (50 runs per seed)
-- [x] **Multi-Seed Evaluation** — FINI (Juliette)
-  - Seeds: 0, 1, 3 (at least 3 as required) 
-  - Episodes per seed: 50
-  - Script: [scripts/evaluate_multiseed.py](scripts/evaluate_multiseed.py)
-  - Results table with mean ± std:
+### 1.3 Évaluation quantitative (50 épisodes par seed)
+- [x] **Évaluation multi-seed** — FINI (Juliette)
+  - Seeds : 0, 1, 3 — 50 épisodes par seed
+  - Script : [scripts/evaluate_multiseed.py](scripts/evaluate_multiseed.py)
+  - Résultats : `comparison_results/multiseed_eval_20260402_164711.md`
 
 | Seed | Custom Mean | Custom Std | SB3 Mean | SB3 Std |
 |------|-------------|-----------|----------|---------|
-| 0    | 18.76       | 5.07      | 10.24    | 5.66    |
-| 1    | 19.37       | 4.47      | 11.28    | 5.94    |
-| 3    | 16.94       | 6.47      | 10.59    | 6.80    |
-| Overall | 18.36    | 5.50      | 10.70    | 6.17    |
+| 0 | 18.76 | 5.07 | 10.24 | 5.66 |
+| 1 | 19.37 | 4.47 | 11.28 | 5.94 |
+| 3 | 16.94 | 6.47 | 10.59 | 6.80 |
+| Overall | 18.36 | 5.50 | 10.70 | 6.17 |
 
-  - Output files: `comparison_results/multiseed_eval_*.json` and `*.md`
-  - Status: FINI
+-[x] **Analyse des résultats** — FINI (Juliette)
+  - Fichier : [Analyse des résultats quantitatifs](analysis/CORE_TASK_CustomDQN_vs_StableBaselines.md#5-analyse-des-résultats-quantitatifs)
 
-### 1.4 Training Curves
-- [x] **Generate Training Curves** — FINI (Simon + Juliette)
-  - Script: [scripts/plot_training_curves.py](scripts/plot_training_curves.py)
-  - Input: `metrics.json` from `checkpoints_custom/` and `checkpoints_sb3/`
-  - Output: PNG plots in `comparison_results/`
-  - Metrics plotted: episodic rewards, moving averages
-  - Status: FINI
+### 1.4 Courbes d'entraînement
+- [x] **Génération des courbes** — FINI (Simon + Juliette)
+  - Script : [scripts/plot_training_curves.py](scripts/plot_training_curves.py)
+  - Résultats : `comparison_results/training_curves_20260402_165013.png`
 
-### 1.5 Qualitative Analysis
-- [x] **Behavior Analysis** — FINI (Juliette)
-  - Describe typical behavior of Custom DQN vs SB3
-  - Identify common decision patterns (lane changes, acceleration, etc.)
-  - File: [analysis/qualitative_behavior.md](analysis/qualitative_behavior.md) 
-  - Status: FINI 
+### 1.5 Analyse qualitative
+- [x] **Analyse comportementale** — FINI (Juliette)
+  - Fichier : [Partie 6.1 : Analyse globale des résultats qualitatifs dans analysis/CORE_TASK_CustomDQN_vs_StableBaselines.md](analysis/CORE_TASK_CustomDQN_vs_StableBaselines.md#6-analyse-des-résultats-qualitatifs-rollouts)
 
-- [x] **Recorded Rollouts** — FINI (Juliette)
-  - Script: [scripts/record_rollout.py](scripts/record_rollout.py)
-  - One rollout per agent (Custom DQN, SB3)
-  - Seeds: 0, 1, 3
-  - Output: Videos in `rollouts/` directory
-  - Status: FINI (videos recorded, waiting for viewing/analysis)
+- [x] **Rollouts enregistrés** — FINI (Juliette)
+  - Script : [scripts/record_rollout.py](scripts/record_rollout.py)
+  - Seeds : 0, 1, 3 — Vidéos dans `rollouts/`
 
-### 1.6 Failure Mode Analysis
-- [x] **Identify and Analyze One Failure Mode** — FINI(Juliette)
-  - Watch recorded rollouts and identify recurring issues
-  - Possible failure modes: collisions, inefficient lane changes, getting stuck, etc.
-  - Provide detailed explanation of **why** it happens (reward shaping, exploration, etc.)
-  - File: [analysis/rollout_notes.md](analysis/rollout_notes.md)
-  - Status: FINI
+- [x] **Identification et analyse des failure modes** — FINI (Juliette)
+  - Fichier : [Partie 6.2 : Exemples de failure modes dans analysis/CORE_TASK_CustomDQN_vs_StableBaselines.md](analysis/CORE_TASK_CustomDQN_vs_StableBaselines.md#exemples-de-failure-modes)
 
-### 1.7 Comparison: Custom vs SB3
-- [x] **Fair Comparison Protocol** — FINI (Juliette)
-  - Same config (shared_core_config.py)
-  - Same seeds for evaluation
-  - Same number of episodes (50 per seed)
-  - Same metrics (mean reward, std)
-  - Analysis in: `comparison_results/multiseed_eval_*.md`
-  - Status: FINI
+### 1.7 Documentation core task
+- [x] **Document de synthèse** — FINI (Albane)
+  - Résumé comparaison, choix de design, résultats clés
+  - Fichier : [analysis/CORE_TASK_CustomDQN_vs_StableBaselines.md](analysis/CORE_TASK_CustomDQN_vs_StableBaselines.md)
 
-### 1.8 Documentation (Core Results)
-- [x] **Summary Document** — A FAIRE (Juliette)
-  - Short summary/discussion of design choices
-  - Key insights: architecture choices, training stability, etc.
-  - Status: A FAIRE
 
----
 
-## PART 2: EXTENSION — Safety-Aware Reward Shaping
+## PART 2 : EXTENSION — Safety-Aware Reward Shaping
 
-### Hypothesis & Rationale
-**Hypothesis**: Adding safety penalties to the reward function during training will produce agents that achieve comparable performance to the baseline while maintaining **lower collision rates and more stable behavior**, thus creating an advantageous safety-performance tradeoff.
+**Hypothèse** : pénaliser explicitement les comportements dangereux pendant
+l'entraînement produit des agents avec un taux de collision réduit, sans
+dégradation significative du reward moyen.
 
-**Rationale**:
-- Highway-v0 has implicit safety costs (collisions), but the default reward doesn't explicitly penalize crashes
-- Safety-Aware RL is increasingly important for autonomous driving applications
-- Reward shaping is a **substantive extension** (not just tuning): new training runs, new metrics, comparative analysis
-- Measurable impact: we can quantify collision rates, safety metrics, and performance tradeoff
+**Formulation** :
+$$r_{safe} = r_{base} - \lambda \cdot c - \mu \cdot \mathbf{1}_{crash}$$
 
-### 2.1 Reward Shaping Implementation
-- [x] **Define Safety-Aware Reward Function** — FINI (Juliette)
-  - Baseline reward: original highway-v0 reward
-  - Safety-Aware reward: baseline - λ * collision_penalty - μ * crash_indicator
-  - Create two variants:
-    - Conservative (high safety weight): λ=10, μ=50
-    - Moderate (balanced): λ=5, μ=30
-  - Document the formulation: [src/rlproject/reward_shaper.py](src/rlproject/reward_shaper.py)
-  - Status: FINI
+Deux variantes : Conservative (λ=10, μ=50) et Moderate (λ=5, μ=30).
 
-- [x] **Modify DQN Training Loop** — FINI (Manon)
-  - Create `train_dqn_safety_aware.py` script
-  - Use reward_shaper in training loop (voir ce qui a été fait à l'étape précédente) 
-  - Train three versions:
-    1. Baseline DQN (no shaping) [already exists]
-    2. DQN-Conservative (high safety penalty)
-    3. DQN-Moderate (balanced)
-  - Save checkpoints: `checkpoints_safety_aware_conservative/` and `checkpoints_safety_aware_moderate/`
-  - Save metrics with additional safety metrics (crash count, near-miss events)
-  - Status: FINI
+### 2.1 Implémentation du reward shaping
+- [x] **Fonction de reward safety-aware** — FINI (Juliette)
+  - Fichier : [src/rlproject/reward_shaper.py](src/rlproject/reward_shaper.py)
 
-### 2.2 Safety Metrics Definition
-- [x] **Implement Safety Evaluation Metrics** — FINI (Albane)
-  - Collision rate: % of episodes with >= 1 collision
-  - Mean collisions per episode
-  - Min distance to obstacles (proxy for safety margin)
-  - Reward per episode (performance)
-  - Create utility functions in: [src/rlproject/safety_metrics.py](src/rlproject/safety_metrics.py) (new file)
-  - Status: FINI
+- [x] **Script d'entraînement safety-aware** — FINI (Manon)
+  - Fichier : [scripts/train_dqn_safety_aware.py](scripts/train_dqn_safety_aware.py)
 
-### 2.3 Evaluation of Safety-Aware Variants
-- [x] **Run Evaluation on All Variants** — FINI (Manon et Albane)
-  - Evaluate all three agents:
-    1. Baseline custom DQN
-    2. DQN-Conservative (safety-aware)
-    3. DQN-Moderate (safety-aware)
-  - Protocol: same 3 seeds (0, 1, 3), 50 episodes per seed
-  - Metrics: reward (mean, std), collision_rate, mean_crashes, safety_margin
-  - Output table: `comparison_results/safety_aware_eval_*.md`
-  - Status: FINI
+- [x] **Entraînement Conservative** — FINI (Manon)
+  - Checkpoints : `checkpoints_safety_aware_conservative/`
+- [x] **Entraînement Moderate** — FINI (Albane)
+  - Checkpoints : `checkpoints_safety_aware_moderate/`
 
-- [x] **Generate Comparative Plots** — FINI (Manon)
-  - Training curves for all three agents (same figure)
-  - Safety metrics vs performance tradeoff (scatter plot or curves)
-  - Collision rate comparison (bar chart)
-  - Output: `comparison_results/safety_aware_*.png`
-  - Status: FINI
+### 2.2 Métriques de sécurité
+- [x] **Implémentation des métriques** — FINI (Albane)
+  - Collision rate, mean crashes, mean speed
+  - Fichier : [src/rlproject/safety_metrics.py](src/rlproject/safety_metrics.py)
 
-### 2.4 Behavior Analysis for Safety-Aware Agents
-- [ ] **Qualitative Observation** — A FAIRE
-  - Record rollouts for both safety-aware variants (same seeds as baseline)
-  - Qualitatively describe differences:
-    - Is the agent more conservative (fewer lane changes)?
-    - Does it maintain larger safety margins?
-    - Are failure modes different (fewer collisions but lower rewards)?
-  - Document in: [analysis/safety_aware_behavior.md](analysis/safety_aware_behavior.md) (new file)
-  - Status: A FAIRE
+### 2.3 Évaluation des variantes
+- [x] **Script d'évaluation** — FINI (Manon)
+  - Fichier : [scripts/evaluate_safety_aware.py](scripts/evaluate_safety_aware.py)
 
-- [ ] **Failure Mode Comparison** — A FAIRE
-  - Compare failure modes of baseline vs safety-aware agents:
-    - Baseline: what crashes/issues emerge when not penalizing safety?
-    - Safety-aware: same issues? New failure modes? (e.g., overly cautious?)
-  - Provide 1-2 concrete examples with video frames if possible
-  - File: [analysis/safety_aware_failure_modes.md](analysis/safety_aware_failure_modes.md) (new file)
-  - Status: A FAIRE
+- [x] **Évaluation des trois agents** — FINI (Albane)
+  - Seeds : 0, 1, 3 — 50 épisodes par seed
+  - Résultats : `comparison_results/safety_aware_eval_20260412_153241.md`
 
-### 2.5 Generalization Experiment (Optional but Recommended)
-- [ ] **Test Generalization to Modified Traffic Density** — A FAIRE (OPTIONAL)
-  - Evaluate all agents (baseline + safety-aware variants) on:
-    - Original density (baseline)
-    - High density (more vehicles, tighter spacing)
-    - Low density (fewer vehicles, safer)
-  - Hypothesis: safety-aware agents generalize better to diverse traffic scenarios
-  - Results file: `comparison_results/generalization_eval_*.md`
-  - Status: A FAIRE (OPTIONAL)
+- [x] **Plots comparatifs** — FINI (Manon)
+  - Script : [scripts/plot_safety_aware.py](scripts/plot_safety_aware.py)
+  - Résultats : `comparison_results/safety_aware_training_curves.png`
 
-### 2.6 Results & Analysis
-- [ ] **Two Key Results** — A FAIRE
-  1. **Result 1**: Safety-Performance Tradeoff Table
-     - Show results table with columns: Agent | Mean Reward | Std | Collision Rate | Safety Margin
-     - Clearly indicate the tradeoff (does higher safety come at performance cost?)
-  
-  2. **Result 2**: Comparative Plots
-     - Training curves overlay (learning speed comparison)
-     - Scatter plot: mean reward vs collision rate (visualize tradeoff)
+### 2.4 Analyse quantitative
+- [x] **Commentaire des résultats quantitatifs** — FINI (Albane)
+  - Fichier : [Analyses des résultats quantitatifs dans analysis/EXTENSION_TASK_safety_aware.md](analysis/EXTENSION_TASK_safety_aware.md#5-analyses-des-résultats-quantitatifs)
 
-  - File: [comparison_results/EXTENSION_RESULTS.md](comparison_results/EXTENSION_RESULTS.md)
-  - Status: A FAIRE
+### 2.5 Analyse qualitative 
+- [ ] **Rollouts variantes safety-aware** — A FAIRE (Manon)
+  - Seeds : 0, 1, 3 pour Conservative et Moderate
 
-### 2.7 Extension Discussion
-- [ ] **Write Extension Analysis** — A FAIRE
-  - What worked: which reward shaping scheme was effective?
-  - What didn't: unexpected results or failure modes in safety-aware training?
-  - Insights: what does the safety-performance tradeoff tell us about the learning?
-  - Limitations: hyperparameter sensitivity, generalization limits, etc.
-  - Future directions: continuous actions for finer safety control, curriculum learning, etc.
-  - File: [analysis/extension_discussion.md](analysis/extension_discussion.md)
-  - Status: A FAIRE
+- [ ] **Analyse qualitative et failure modes** — A FAIRE (Manon)
+  - Différences comportementales entre les trois agents
+  - Fichier : [Analyse des résultats qualitatifs dans analysis/EXTENSION_TASK_safety_aware.md](analysis/EXTENSION_TASK_safety_aware.md#6-analyse-des-résultats-qualitatifs-rollouts)
 
----
 
-## PART 3: FINAL DELIVERABLES
+### 2.6 Documentation extension task
+- [x] **Document de synthèse** — FINI (Albane)
+  - Résumé comparaison, choix de design, résultats clés
+  - Fichier : [analysis/EXTENSION_TASK_safety_aware.md](analysis/EXTENSION_TASK_safety_aware.md)
 
-### 3.1 Core Task Summary
-- [ ] **Core Results Summary** — A FAIRE
-  - 1-2 page summary of baseline comparison
-  - Table: performance metrics
-  - Key finding: Custom DQN outperforms SB3
-  - One failure mode example
-  - File: `CORE_RESULTS_SUMMARY.md` or section in README
-  - Status: A FAIRE
 
-### 3.2 Extension Summary
-- [ ] **Extension Results Summary** — A FAIRE
-  - 1 page on safety-aware extension
-  - Key result: safety-performance tradeoff curve/table
-  - Interpretation and implications
-  - File: `EXTENSION_RESULTS_SUMMARY.md` or section in README
-  - Status: A FAIRE
+## PART 3 : MISE EN FORME DES MARKDOWNS FINAUX
 
-### 3.3 README Update
-- [ ] **Update Main README** — A FAIRE
-  - Add "Results" section with:
-    - Core task findings (link to summary)
-    - Extension findings (link to summary)
-    - Quick how-to for running each experiment
-  - File: [README.md](README.md)
-  - Status: A FAIRE
+- [x] Mis à jour du README (Simon, Juliette, Manon et Albane)
+- [x] Mis à jour du task.md (Juliette et Albane)
 
----
 
-## Key References
+## Références
 
-- Highway-v0 documentation: https://highway-env.readthedocs.io/
-- Reward shaping literature: "Potential-Based Reward Shaping" (Ng et al., 1999)
-- Safety in RL: "Safe Reinforcement Learning in Constrained Markov Decision Processes" (various)
-- Dueling DQN: Wang et al., 2015
-- Double DQN: Van Hasselt et al., 2015
+- Dueling DQN : Wang et al., 2015
+- Double DQN : Van Hasselt et al., 2015
+- Highway-env : https://highway-env.readthedocs.io/
