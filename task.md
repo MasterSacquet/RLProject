@@ -105,10 +105,10 @@ Deux variantes : Conservative (λ=10, μ=50) et Moderate (λ=5, μ=30).
   - Fichier : [Analyses des résultats quantitatifs dans analysis/EXTENSION_TASK_safety_aware.md](analysis/EXTENSION_TASK_safety_aware.md#5-analyses-des-résultats-quantitatifs)
 
 ### 2.5 Analyse qualitative 
-- [ ] **Rollouts variantes safety-aware** — A FAIRE (Manon)
+- [ ] **Rollouts variantes safety-aware** — FINI (Manon)
   - Seeds : 0, 1, 3 pour Conservative et Moderate
 
-- [ ] **Analyse qualitative et failure modes** — A FAIRE (Manon)
+- [ ] **Analyse qualitative et failure modes** — FINI (Manon)
   - Différences comportementales entre les trois agents
   - Fichier : [Analyse des résultats qualitatifs dans analysis/EXTENSION_TASK_safety_aware.md](analysis/EXTENSION_TASK_safety_aware.md#6-analyse-des-résultats-qualitatifs-rollouts)
 
